@@ -17,7 +17,7 @@ const home = () => {
   
   return (
     <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-      <Text style={{justifyContent: 'center', alignItems: 'center'}}>home</Text>
+      <Text style={{justifyContent: 'center', alignItems: 'center'}}>home screen</Text>
     </View>
   )
 }
