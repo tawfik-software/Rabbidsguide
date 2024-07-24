@@ -14,8 +14,8 @@ const index = () => {
 
   return (
     <SafeAreaView className="flex-1">
-      <ImageBackground className="flex-1" source={Welcome}>
-        <View className="items-center mt-16 flex-1">
+      <ImageBackground className="flex-1 " source={Welcome}>
+        <View className="items-center mt-20 flex-1 w-screen ">
           <Text className="text-6xl text-white font-mRegular">Rabbids</Text>
           <Text className="text-6xl text-white font-mRegular">Guide</Text>
         </View>
