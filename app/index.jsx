@@ -9,7 +9,7 @@ const index = () => {
   useEffect(() => {
     setTimeout(() => {
       router.push("about");
-    }, 3000);
+    }, 300);
   });
 
   return (
