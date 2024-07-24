@@ -58,7 +58,7 @@ const Slide = ({ item }) => {
         //   justifyContent: "center",
         //   alignItems: "center",
         // }}
-        className="w-screen h-[500px] justify-center items-center"
+        className="w-screen h-[450px] justify-center items-center"
       />
       <View style={{ top: 25 }}>
         <Text
@@ -111,7 +111,7 @@ const about = () => {
     return (
       <View
         style={{
-          height: height * 0.25,
+          height: height * 0.15,
           justifyContent: "space-between",
           paddingHorizontal: 20,
         }}
