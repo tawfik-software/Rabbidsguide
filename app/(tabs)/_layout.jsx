@@ -15,27 +15,9 @@ const Layout = () => {
           tabBarActiveTintColor: "#ffffff",
           tabBarInactiveTintColor: "#bdbcbc",
           tabBarStyle: {
+            backgroundColor: "#ffffff",
             height: 80,
-            position: "absolute",
-            shadowColor: "rgba(47,64,85,1)",
-            shadowRadius: 12,
-            shadowOffset: {
-              height: 4,
-              width: 0,
-            },
-            shadowOpacity: 0.12,
           },
-          tabBarBackground: () => (
-            <BlurView
-              blurType="regular"
-              blurAmount={80}
-              style={{
-                ...StyleSheet.absoluteFillObject,
-                overflow: "hidden",
-                backgroundColor: "transparent",
-              }}
-            />
-          ),
         }}
       >
         <Tabs.Screen

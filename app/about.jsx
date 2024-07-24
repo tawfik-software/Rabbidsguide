@@ -11,8 +11,7 @@ import {
   ImageBackground,
 } from "react-native";
 import React, { useLayoutEffect } from "react";
-import { useNavigation } from "expo-router";
-import { useRouter } from "expo-router";
+import { Redirect, router, useRouter, useNavigation } from "expo-router";
 
 const { width, height } = Dimensions.get("window");
 
@@ -142,7 +141,7 @@ const about = () => {
             <View style={{ height: 50 }}>
               <TouchableOpacity
                 style={styles.btn}
-                onPress={() => router.push("/home")}
+                onPress={() => router.push("(tabs)/home")}
               >
                 <Text style={{ fontWeight: "bold", fontSize: 15 }}>
                   GET STARTED
