@@ -1,6 +1,5 @@
 import {
   SafeAreaView,
-  Image,
   StyleSheet,
   FlatList,
   View,
@@ -10,7 +9,7 @@ import {
   Dimensions,
   ImageBackground,
 } from "react-native";
-import React, { useLayoutEffect } from "react";
+import React, { useLayoutEffect, useState, useRef } from "react";
 import { Redirect, router, useRouter, useNavigation } from "expo-router";
 
 const { width, height } = Dimensions.get("window");
@@ -53,16 +52,27 @@ const Slide = ({ item }) => {
     >
       <ImageBackground
         source={item?.image}
-        style={{
-          height: 394,
-          width: 502,
-          justifyContent: "center",
-          alignItems: "center",
-        }}
+        // style={{
+        //   height: 394,
+        //   width: 502,
+        //   justifyContent: "center",
+        //   alignItems: "center",
+        // }}
+        className="w-screen h-[500px] justify-center items-center"
       />
       <View style={{ top: 25 }}>
-        <Text style={styles.title}>{item?.title}</Text>
-        <Text style={styles.subtitle}>{item?.subtitle}</Text>
+        <Text
+          style={styles.title}
+          className="font-aProBold text-xl text-center"
+        >
+          {item?.title}
+        </Text>
+        <Text
+          style={styles.subtitle}
+          className="font-aPro text-lg text-center px-4 mt-4"
+        >
+          {item?.subtitle}
+        </Text>
       </View>
     </View>
   );
@@ -71,16 +81,10 @@ const Slide = ({ item }) => {
 const about = () => {
   const navigation = useNavigation();
 
-  useLayoutEffect(() => {
-    navigation.setOptions({
-      headerShown: false,
-    });
-  });
-
   const router = useRouter();
 
-  const [currentSlideIndex, setCurrentSlideIndex] = React.useState(0);
-  const ref = React.useRef();
+  const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
+  const ref = useRef();
   const updateCurrentSlideIndex = (e) => {
     const contentOffsetX = e.nativeEvent.contentOffset.x;
     const currentIndex = Math.round(contentOffsetX / width);
@@ -143,7 +147,7 @@ const about = () => {
                 style={styles.btn}
                 onPress={() => router.push("(tabs)/home")}
               >
-                <Text style={{ fontWeight: "bold", fontSize: 15 }}>
+                <Text className="font-aPro text-white text-lg">
                   GET STARTED
                 </Text>
               </TouchableOpacity>
@@ -164,15 +168,7 @@ const about = () => {
                 }}
                 onPress={skip}
               >
-                <Text
-                  style={{
-                    fontWeight: "bold",
-                    fontSize: 15,
-                    color: COLORS.white,
-                  }}
-                >
-                  SKIP
-                </Text>
+                <Text className="font-aPro text-white text-lg">SKIP</Text>
               </TouchableOpacity>
               <View style={{ width: 15 }} />
               <TouchableOpacity
@@ -180,15 +176,7 @@ const about = () => {
                 onPress={goToNextSlide}
                 style={styles.btn}
               >
-                <Text
-                  style={{
-                    fontWeight: "bold",
-                    fontSize: 15,
-                    color: COLORS.white,
-                  }}
-                >
-                  NEXT
-                </Text>
+                <Text className="font-aPro text-white text-lg">NEXT</Text>
               </TouchableOpacity>
             </View>
           )}
@@ -215,22 +203,6 @@ const about = () => {
   );
 };
 const styles = StyleSheet.create({
-  subtitle: {
-    color: "black",
-    fontSize: 13,
-    marginTop: 10,
-    maxWidth: "75%",
-    textAlign: "center",
-    lineHeight: 23,
-    left: 30,
-  },
-  title: {
-    color: "black",
-    fontSize: 22,
-    fontWeight: "bold",
-    marginTop: 20,
-    textAlign: "center",
-  },
   image: {
     height: "100%",
     width: "100%",
