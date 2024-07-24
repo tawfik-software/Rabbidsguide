@@ -17,12 +17,16 @@ import {
 } from "@expo/vector-icons";
 import Thmage from "../../assets/images/3thmage.png";
 import Img2 from "../../assets/images/secondeimage.png";
+import { useRouter } from "expo-router";
 
 const chapters = () => {
+
+  const router = useRouter();
+
   return (
     <SafeAreaView className="flex-1 bg-white">
       <View className="flex-1 px-4">
-        <View className="flex-row items-center mt-14">
+        <View className="flex-row items-center mt-14 top-3">
           <View className="flex-1">
             <Text className="text-gray-400 text-sm font-aPro">
               Hi 👋, this is your guide for →
@@ -34,14 +38,14 @@ const chapters = () => {
             className="h-10 w-10 rounded-full"
           />
         </View>
-        <View className="mt-4 mb-2">
+        <View className="mt-6 mb-2">
           <Text className="text-xl font-mBold">Chapters</Text>
         </View>
         <ScrollView className="flex-1" showsVerticalScrollIndicator={false}>
           <View className="gap-y-4 pb-[90px]">
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() => router.push('user.chapters')}>
               <ImageBackground
-                source={Thmage}
+                source={require('../../assets/images/elementmap.jpeg')}
                 className="w-full h-40 items-center justify-center rounded-xl overflow-hidden"
               >
                 <Text className="text-white font-mMedium">Chapter1</Text>
@@ -52,7 +56,7 @@ const chapters = () => {
             </TouchableOpacity>
             <TouchableOpacity>
               <ImageBackground
-                source={Img2}
+                source={require('../../assets/images/firstimage.png')}
                 className="w-full h-40 items-center justify-center rounded-xl overflow-hidden"
               >
                 <Text className="text-white font-mMedium">Chapter1</Text>
@@ -63,7 +67,7 @@ const chapters = () => {
             </TouchableOpacity>
             <TouchableOpacity>
               <ImageBackground
-                source={Thmage}
+                source={require('../../assets/images/ray.jpeg')}
                 className="w-full h-40 items-center justify-center rounded-xl overflow-hidden"
               >
                 <Text className="text-white font-mMedium">Chapter1</Text>
@@ -74,7 +78,7 @@ const chapters = () => {
             </TouchableOpacity>
             <TouchableOpacity>
               <ImageBackground
-                source={Img2}
+                source={require('../../assets/images/welcome.jpeg')}
                 className="w-full h-40 items-center justify-center rounded-xl overflow-hidden"
               >
                 <Text className="text-white font-mMedium">Chapter1</Text>

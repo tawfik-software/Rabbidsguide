@@ -13,6 +13,7 @@ import {
   MaterialIcons,
   Octicons,
   FontAwesome5,
+  Fontisto,
 } from "@expo/vector-icons";
 const savedArticles = () => {
   return (
@@ -41,7 +42,7 @@ const savedArticles = () => {
             <View className="flex-row">
               <TouchableOpacity className="relative w-[45%]">
                 <Image
-                  source={require("../../assets/images/secondeimage.png")}
+                  source={require("../../assets/images/bodyarticles.png")}
                   className="rounded-xl w-[170px] h-[170px]"
                 />
                 <Text className="text-[13px] font-mRegular text-center text-gray-600 mt-1">
@@ -49,13 +50,13 @@ const savedArticles = () => {
                 </Text>
                 <View className="w-8 h-8 rounded-full bg-white absolute z-10 top-[1px] right-[-7px]">
                   <View className="w-full h-full items-center justify-center">
-                    <Ionicons name="save" size={20} color={"#f59e4e"} />
+                    <Fontisto name="bookmark" size={24} color="black" />
                   </View>
                 </View>
               </TouchableOpacity>
               <TouchableOpacity className="relative w-[45%] ml-6">
                 <Image
-                  source={require("../../assets/images/secondeimage.png")}
+                  source={require("../../assets/images/firstimage.png")}
                   className="rounded-xl w-[170px] h-[170px]"
                 />
 
@@ -64,7 +65,7 @@ const savedArticles = () => {
                 </Text>
                 <View className="w-8 h-8 rounded-full bg-white absolute z-10 top-[1px] right-[-7px]">
                   <View className="w-full h-full items-center justify-center">
-                    <Ionicons name="save" size={20} color={"#f59e4e"} />
+                    <Fontisto name="bookmark" size={24} color="black" />
                   </View>
                 </View>
               </TouchableOpacity>
@@ -72,7 +73,7 @@ const savedArticles = () => {
             <View className="flex-row">
               <TouchableOpacity className="relative w-[45%]">
                 <Image
-                  source={require("../../assets/images/secondeimage.png")}
+                  source={require("../../assets/images/raymanbody.png")}
                   className="rounded-xl w-[170px] h-[170px]"
                 />
                 <Text className="text-[13px] font-mRegular text-center text-gray-600 mt-1">
@@ -80,13 +81,13 @@ const savedArticles = () => {
                 </Text>
                 <View className="w-8 h-8 rounded-full bg-white absolute z-10 top-[1px] right-[-7px]">
                   <View className="w-full h-full items-center justify-center">
-                    <Ionicons name="save" size={20} color={"#f59e4e"} />
+                    <Fontisto name="bookmark" size={24} color="black" />
                   </View>
                 </View>
               </TouchableOpacity>
               <TouchableOpacity className="relative w-[45%] ml-6">
                 <Image
-                  source={require("../../assets/images/secondeimage.png")}
+                  source={require("../../assets/images/3thmage.png")}
                   className="rounded-xl w-[170px] h-[170px]"
                 />
 
@@ -95,7 +96,7 @@ const savedArticles = () => {
                 </Text>
                 <View className="w-8 h-8 rounded-full bg-white absolute z-10 top-[1px] right-[-7px]">
                   <View className="w-full h-full items-center justify-center">
-                    <Ionicons name="save" size={20} color={"#f59e4e"} />
+                    <Fontisto name="bookmark" size={24} color="black" />
                   </View>
                 </View>
               </TouchableOpacity>
@@ -103,7 +104,7 @@ const savedArticles = () => {
             <View className="flex-row">
               <TouchableOpacity className="relative w-[45%]">
                 <Image
-                  source={require("../../assets/images/secondeimage.png")}
+                  source={require("../../assets/images/welcome.jpeg")}
                   className="rounded-xl w-[170px] h-[170px]"
                 />
                 <Text className="text-[13px] font-mRegular text-center text-gray-600 mt-1">
@@ -111,13 +112,13 @@ const savedArticles = () => {
                 </Text>
                 <View className="w-8 h-8 rounded-full bg-white absolute z-10 top-[1px] right-[-7px]">
                   <View className="w-full h-full items-center justify-center">
-                    <Ionicons name="save" size={20} color={"#f59e4e"} />
+                    <Fontisto name="bookmark" size={24} color="black" />
                   </View>
                 </View>
               </TouchableOpacity>
               <TouchableOpacity className="relative w-[45%] ml-6">
                 <Image
-                  source={require("../../assets/images/secondeimage.png")}
+                  source={require("../../assets/images/ray.jpeg")}
                   className="rounded-xl w-[170px] h-[170px]"
                 />
 
@@ -126,7 +127,7 @@ const savedArticles = () => {
                 </Text>
                 <View className="w-8 h-8 rounded-full bg-white absolute z-10 top-[1px] right-[-7px]">
                   <View className="w-full h-full items-center justify-center">
-                    <Ionicons name="save" size={20} color={"#f59e4e"} />
+                    <Fontisto name="bookmark" size={24} color="black" />
                   </View>
                 </View>
               </TouchableOpacity>
@@ -134,7 +135,7 @@ const savedArticles = () => {
             <View className="flex-row">
               <TouchableOpacity className="relative w-[45%]">
                 <Image
-                  source={require("../../assets/images/secondeimage.png")}
+                  source={require("../../assets/images/3thmage.png")}
                   className="rounded-xl w-[170px] h-[170px]"
                 />
                 <Text className="text-[13px] font-mRegular text-center text-gray-600 mt-1">
@@ -142,13 +143,13 @@ const savedArticles = () => {
                 </Text>
                 <View className="w-8 h-8 rounded-full bg-white absolute z-10 top-[1px] right-[-7px]">
                   <View className="w-full h-full items-center justify-center">
-                    <Ionicons name="save" size={20} color={"#f59e4e"} />
+                    <Fontisto name="bookmark" size={24} color="black" />
                   </View>
                 </View>
               </TouchableOpacity>
               <TouchableOpacity className="relative w-[45%] ml-6">
                 <Image
-                  source={require("../../assets/images/secondeimage.png")}
+                  source={require("../../assets/images/raymanbody.png")}
                   className="rounded-xl w-[170px] h-[170px]"
                 />
 
@@ -157,73 +158,12 @@ const savedArticles = () => {
                 </Text>
                 <View className="w-8 h-8 rounded-full bg-white absolute z-10 top-[1px] right-[-7px]">
                   <View className="w-full h-full items-center justify-center">
-                    <Ionicons name="save" size={20} color={"#f59e4e"} />
+                    <Fontisto name="bookmark" size={24} color="black" />
                   </View>
                 </View>
               </TouchableOpacity>
             </View>
-            <View className="flex-row">
-              <TouchableOpacity className="relative w-[45%]">
-                <Image
-                  source={require("../../assets/images/secondeimage.png")}
-                  className="rounded-xl w-[170px] h-[170px]"
-                />
-                <Text className="text-[13px] font-mRegular text-center text-gray-600 mt-1">
-                  Fancomic Rayman Night...
-                </Text>
-                <View className="w-8 h-8 rounded-full bg-white absolute z-10 top-[1px] right-[-7px]">
-                  <View className="w-full h-full items-center justify-center">
-                    <Ionicons name="save" size={20} color={"#f59e4e"} />
-                  </View>
-                </View>
-              </TouchableOpacity>
-              <TouchableOpacity className="relative w-[45%] ml-6">
-                <Image
-                  source={require("../../assets/images/secondeimage.png")}
-                  className="rounded-xl w-[170px] h-[170px]"
-                />
-
-                <Text className="text-[13px] font-mRegular text-center text-gray-600 mt-1">
-                  Fancomic Rayman Night...
-                </Text>
-                <View className="w-8 h-8 rounded-full bg-white absolute z-10 top-[1px] right-[-7px]">
-                  <View className="w-full h-full items-center justify-center">
-                    <Ionicons name="save" size={20} color={"#f59e4e"} />
-                  </View>
-                </View>
-              </TouchableOpacity>
-            </View>
-            <View className="flex-row">
-              <TouchableOpacity className="relative w-[45%]">
-                <Image
-                  source={require("../../assets/images/secondeimage.png")}
-                  className="rounded-xl w-[170px] h-[170px]"
-                />
-                <Text className="text-[13px] font-mRegular text-center text-gray-600 mt-1">
-                  Fancomic Rayman Night...
-                </Text>
-                <View className="w-8 h-8 rounded-full bg-white absolute z-10 top-[1px] right-[-7px]">
-                  <View className="w-full h-full items-center justify-center">
-                    <Ionicons name="save" size={20} color={"#f59e4e"} />
-                  </View>
-                </View>
-              </TouchableOpacity>
-              <TouchableOpacity className="relative w-[45%] ml-6">
-                <Image
-                  source={require("../../assets/images/secondeimage.png")}
-                  className="rounded-xl w-[170px] h-[170px]"
-                />
-
-                <Text className="text-[13px] font-mRegular text-center text-gray-600 mt-1">
-                  Fancomic Rayman Night...
-                </Text>
-                <View className="w-8 h-8 rounded-full bg-white absolute z-10 top-[1px] right-[-7px]">
-                  <View className="w-full h-full items-center justify-center">
-                    <Ionicons name="save" size={20} color={"#f59e4e"} />
-                  </View>
-                </View>
-              </TouchableOpacity>
-            </View>
+            
           </View>
         </ScrollView>
       </View>

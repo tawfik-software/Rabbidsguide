@@ -8,8 +8,11 @@ import {
   MaterialIcons,
   Octicons,
   FontAwesome5,
+  Entypo, 
+  Fontisto,
 } from "@expo/vector-icons";
 import { BlurView } from "expo-blur";
+
 const Layout = () => {
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
@@ -58,7 +61,7 @@ const Layout = () => {
             tabBarIcon: ({ color, focused }) => (
               <TabIcon
                 icon={
-                  <MaterialIcons name="photo-filter" size={24} color={color} />
+                  <Entypo name="map" size={24} color={color} />
                 }
                 color={color}
                 focused={focused}
@@ -72,7 +75,7 @@ const Layout = () => {
             headerShown: false,
             tabBarIcon: ({ color, focused }) => (
               <TabIcon
-                icon={<Ionicons name="save" size={24} color={color} />}
+                icon={<Fontisto name="favorite" size={24} color={color} />}
                 color={color}
                 focused={focused}
               />
