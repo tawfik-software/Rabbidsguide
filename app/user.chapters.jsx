@@ -1,55 +1,36 @@
-import {
-  View,
-  Text,
-  Image,
-  SafeAreaView,
-  TouchableOpacity,
-  ScrollView,
-} from "react-native";
-import React from "react";
-import { useNavigation } from "@react-navigation/native";
-import { AntDesign } from "@expo/vector-icons";
-import { useRouter } from "expo-router";
+import { View, Image, TouchableOpacity, ScrollView, ImageBackground, SafeAreaView, Text } from 'react-native'
+import React, { useLayoutEffect } from 'react'
+import { AntDesign, Ionicons } from "@expo/vector-icons";
+import { useNavigation } from '@react-navigation/native';
 
-const home = () => {
-  const router = useRouter();
-
+const userchapters = () => {
   const navigation = useNavigation();
 
   return (
     <SafeAreaView className="flex-1 bg-white">
-      {/* Header */}
-      <View className="flex-1 px-4">
-        <View className="flex-row items-center mt-14">
-          <View className="flex-1">
-            <Text className="text-gray-400 text-xs font-aPro"> 
-              Hi 👋, this is your guide for →
-            </Text>
-            <Text className="font-mBold text-xl">Rayman Raving Rabbids</Text>
-          </View>
-          <TouchableOpacity
-            activeOpacity={0.8}
-            className="ml-4"
-            onPress={() => router.push('./profile')}
-          >
-          <Image
-            source={require("../../assets/images/firstimage.png")}
-            className="h-10 w-10 rounded-full"
-          />
-          </TouchableOpacity>
-        </View>
+            <View>
+              <ImageBackground
+                source={require('../assets/images/elementmap.jpeg')}
+                className="w-full h-40 items-center justify-center rounded-sm overflow-hidden"
+              >
+              <Ionicons name="close-outline" size={26} color="white" 
+                style={{ position: "absolute", top: -2, right: 8 }}
+                onPress={() => navigation.goBack()}
+              />
+                <Text className="text-white font-mMedium">Chapter1</Text>
+                <Text className="text-white font-mBold">
+                  Fancomic Rayman Nightmarish
+                </Text>
+              </ImageBackground>
+            </View>
 
-        {/* Body */}
-        <View className="mt-4 mb-2">
-          <Text className="text-xl font-mBold">Last articles</Text>
-        </View>
-        <ScrollView className="flex-1" showsVerticalScrollIndicator={false}>
+            <ScrollView className="flex-1 top-3" showsVerticalScrollIndicator={false}>
           <View className="gap-y-1">
 
             {/* Element 1 */}
             <TouchableOpacity className="flex-row">
               <Image
-                source={require("../../assets/images/secondeimage.png")}
+                source={require("../assets/images/secondeimage.png")}
                 className="h-28 w-28 p-4 rounded-xl"
               />
               <View className="ml-2 relative">
@@ -66,7 +47,7 @@ const home = () => {
                   name="arrowright"
                   size={16}
                   color="black"
-                  style={{ position: "absolute", bottom: 0, left: 220 }}
+                  style={{ position: "absolute", bottom: 0, left: 260 }}
                 /> 
               </View>
             </TouchableOpacity>
@@ -75,7 +56,7 @@ const home = () => {
 
             <TouchableOpacity className="flex-row">
               <Image
-                source={require("../../assets/images/bodyarticles.png")}
+                source={require("../assets/images/bodyarticles.png")}
                 className="h-28 w-28 p-4 rounded-xl"
               />
               <View className="ml-2 relative">
@@ -92,7 +73,7 @@ const home = () => {
                   name="arrowright"
                   size={16}
                   color="black"
-                  style={{ position: "absolute", bottom: 0, left: 220 }}
+                  style={{ position: "absolute", bottom: 0, left: 260 }}
                 /> 
               </View>
             </TouchableOpacity>
@@ -101,7 +82,7 @@ const home = () => {
 
             <TouchableOpacity className="flex-row">
               <Image
-                source={require("../../assets/images/ray.jpeg")}
+                source={require("../assets/images/ray.jpeg")}
                 className="h-28 w-28 p-4 rounded-xl"
               />
               <View className="ml-2 relative">
@@ -118,7 +99,7 @@ const home = () => {
                   name="arrowright"
                   size={16}
                   color="black"
-                  style={{ position: "absolute", bottom: 0, left: 220 }}
+                  style={{ position: "absolute", bottom: 0, left: 260 }}
                 /> 
               </View>
             </TouchableOpacity>
@@ -127,7 +108,7 @@ const home = () => {
 
             <TouchableOpacity className="flex-row">
               <Image
-                source={require("../../assets/images/raymanbody.png")}
+                source={require("../assets/images/raymanbody.png")}
                 className="h-28 w-28 p-4 rounded-xl"
               />
               <View className="ml-2 relative">
@@ -144,7 +125,7 @@ const home = () => {
                   name="arrowright"
                   size={16}
                   color="black"
-                  style={{ position: "absolute", bottom: 0, left: 220 }}
+                  style={{ position: "absolute", bottom: 0, left: 260 }}
                 /> 
               </View>
             </TouchableOpacity>
@@ -153,7 +134,7 @@ const home = () => {
 
             <TouchableOpacity className="flex-row">
               <Image
-                source={require("../../assets/images/firstimage.png")}
+                source={require("../assets/images/firstimage.png")}
                 className="h-28 w-28 p-4 rounded-xl"
               />
               <View className="ml-2 relative">
@@ -170,7 +151,7 @@ const home = () => {
                   name="arrowright"
                   size={16}
                   color="black"
-                  style={{ position: "absolute", bottom: 0, left: 220 }}
+                  style={{ position: "absolute", bottom: 0, left: 260 }}
                 /> 
               </View>
             </TouchableOpacity>
@@ -179,7 +160,7 @@ const home = () => {
             
             <TouchableOpacity className="flex-row">
               <Image
-                source={require("../../assets/images/3thmage.png")}
+                source={require("../assets/images/3thmage.png")}
                 className="h-28 w-28 p-4 rounded-xl"
               />
               <View className="ml-2 relative">
@@ -196,7 +177,7 @@ const home = () => {
                   name="arrowright"
                   size={16}
                   color="black"
-                  style={{ position: "absolute", bottom: 0, left: 220 }}
+                  style={{ position: "absolute", bottom: 0, left: 260 }}
                 /> 
               </View>
             </TouchableOpacity>
@@ -204,9 +185,8 @@ const home = () => {
 
           </View>
         </ScrollView>
-      </View>
     </SafeAreaView>
-  );
-};
+  )
+}
 
-export default home;
+export default userchapters

@@ -12,6 +12,7 @@ import {
   Fontisto,
 } from "@expo/vector-icons";
 import { BlurView } from "expo-blur";
+
 const Layout = () => {
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
