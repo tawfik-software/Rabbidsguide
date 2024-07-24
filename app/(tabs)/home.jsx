@@ -30,7 +30,6 @@ const home = () => {
           justifyContent: "center",
           alignItems: "center",
         }}
-        className="bg-[#7c7c7c00]"
       >
         <Text style={{ justifyContent: "center", alignItems: "center" }}>
           home one
