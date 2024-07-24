@@ -21,7 +21,7 @@ const index = () => {
         </View>
         <View>
           <Progress.Bar
-            progress={0.2}
+            progress={0.5}
             width={299}
             indeterminate={true}
             color="#ff8c00"
