@@ -23,7 +23,7 @@ const home = () => {
   // });
 
   return (
-    <SafeAreaView style={{ flex: 1 }}>
+    <SafeAreaView className="flex-1 bg-red-100">
       <View
         style={{
           flex: 1,

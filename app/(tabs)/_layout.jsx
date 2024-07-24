@@ -1,10 +1,14 @@
 import { View, Text, StyleSheet } from "react-native";
 import React from "react";
 import { Tabs } from "expo-router";
-import { StatusBar } from "expo-status-bar";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import TabIcon from "../../components/ui/TapIcon";
-import { Octicons } from "@expo/vector-icons";
+import {
+  Ionicons,
+  MaterialIcons,
+  Octicons,
+  FontAwesome5,
+} from "@expo/vector-icons";
 import { BlurView } from "expo-blur";
 const Layout = () => {
   return (
@@ -15,8 +19,22 @@ const Layout = () => {
           tabBarActiveTintColor: "#ffffff",
           tabBarInactiveTintColor: "#bdbcbc",
           tabBarStyle: {
-            backgroundColor: "#ffffff",
+            position: "absolute",
             height: 80,
+          },
+          tabBarBackground: () => {
+            <View
+              style={{ ...StyleSheet.absoluteFillObject, overflow: "hidden" }}
+            >
+              <BlurView
+                intensity={80}
+                blurType="regular"
+                style={{
+                  backgroundColor: "transparent",
+                  flex: 1,
+                }}
+              />
+            </View>;
           },
         }}
       >
@@ -39,7 +57,9 @@ const Layout = () => {
             headerShown: false,
             tabBarIcon: ({ color, focused }) => (
               <TabIcon
-                icon={<Octicons name="home" size={24} color={color} />}
+                icon={
+                  <MaterialIcons name="photo-filter" size={24} color={color} />
+                }
                 color={color}
                 focused={focused}
               />
@@ -52,7 +72,7 @@ const Layout = () => {
             headerShown: false,
             tabBarIcon: ({ color, focused }) => (
               <TabIcon
-                icon={<Octicons name="home" size={24} color={color} />}
+                icon={<Ionicons name="save" size={24} color={color} />}
                 color={color}
                 focused={focused}
               />
@@ -65,7 +85,7 @@ const Layout = () => {
             headerShown: false,
             tabBarIcon: ({ color, focused }) => (
               <TabIcon
-                icon={<Octicons name="home" size={24} color={color} />}
+                icon={<FontAwesome5 name="user" size={24} color={color} />}
                 color={color}
                 focused={focused}
               />
@@ -73,7 +93,6 @@ const Layout = () => {
           }}
         />
       </Tabs>
-      <StatusBar backgroundColor="#ffffff" barStyle="dark-content" />
     </GestureHandlerRootView>
   );
 };
