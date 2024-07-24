@@ -8,9 +8,10 @@ import {
   TouchableOpacity,
   Dimensions,
   ImageBackground,
+  Platform,
 } from "react-native";
-import React, { useLayoutEffect, useState, useRef } from "react";
-import { Redirect, router, useRouter, useNavigation } from "expo-router";
+import React, { useState, useRef } from "react";
+import { useRouter, useNavigation } from "expo-router";
 
 const { width, height } = Dimensions.get("window");
 
@@ -52,12 +53,6 @@ const Slide = ({ item }) => {
     >
       <ImageBackground
         source={item?.image}
-        // style={{
-        //   height: 394,
-        //   width: 502,
-        //   justifyContent: "center",
-        //   alignItems: "center",
-        // }}
         className="w-screen h-[450px] justify-center items-center"
       />
       <View style={{ top: 25 }}>
@@ -80,11 +75,10 @@ const Slide = ({ item }) => {
 
 const about = () => {
   const navigation = useNavigation();
-
   const router = useRouter();
-
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
   const ref = useRef();
+
   const updateCurrentSlideIndex = (e) => {
     const contentOffsetX = e.nativeEvent.contentOffset.x;
     const currentIndex = Math.round(contentOffsetX / width);
@@ -116,7 +110,6 @@ const about = () => {
           paddingHorizontal: 20,
         }}
       >
-        {/* Indicator container */}
         <View
           style={{
             flexDirection: "row",
@@ -124,7 +117,6 @@ const about = () => {
             marginTop: 20,
           }}
         >
-          {/* Render indicator */}
           {slides.map((_, index) => (
             <View
               key={index}
@@ -139,7 +131,6 @@ const about = () => {
           ))}
         </View>
 
-        {/* Render buttons */}
         <View style={{ marginBottom: 20 }}>
           {currentSlideIndex == slides.length - 1 ? (
             <View style={{ height: 50 }}>
@@ -194,14 +185,17 @@ const about = () => {
         contentContainerStyle={{ height: height * 0.75 }}
         showsHorizontalScrollIndicator={false}
         horizontal
-        data={slides}
         pagingEnabled
+        data={slides}
         renderItem={({ item }) => <Slide item={item} />}
+        scrollEnabled={true} // Enable scrolling
+        showsVerticalScrollIndicator={false} // Disable vertical scroll indicators
       />
       <Footer />
     </SafeAreaView>
   );
 };
+
 const styles = StyleSheet.create({
   image: {
     height: "100%",
@@ -224,4 +218,5 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
 });
+
 export default about;

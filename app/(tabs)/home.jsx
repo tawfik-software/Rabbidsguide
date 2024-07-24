@@ -4,26 +4,14 @@ import {
   Image,
   SafeAreaView,
   TouchableOpacity,
-  StyleSheet,
-  FlatList,
   ScrollView,
 } from "react-native";
-import React, { useEffect, useLayoutEffect } from "react";
-import { NavigationContainer } from "@react-navigation/native";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { BlurView } from "expo-blur";
-import about from "../about";
+import React from "react";
 import { useNavigation } from "@react-navigation/native";
 import { AntDesign } from "@expo/vector-icons";
 
 const home = () => {
   const navigation = useNavigation();
-
-  // useLayoutEffect(() => {
-  //   navigation.setOptions({
-  //     headerShown: false,
-  //   });
-  // });
 
   return (
     <SafeAreaView className="flex-1 bg-white">
@@ -31,7 +19,7 @@ const home = () => {
       <View className="flex-1 px-4">
         <View className="flex-row items-center mt-14">
           <View className="flex-1">
-            <Text className="text-gray-400 text-xs font-aPro">
+            <Text className="text-gray-400 text-sm font-aPro">
               Hi 👋, this is your guide for →
             </Text>
             <Text className="font-mBold text-xl">Rayman Raving Rabbids</Text>
@@ -43,11 +31,11 @@ const home = () => {
         </View>
 
         {/* Body */}
-        <View className="mt-4">
+        <View className="mt-4 mb-2">
           <Text className="text-xl font-mBold">Last articles</Text>
         </View>
         <ScrollView className="flex-1" showsVerticalScrollIndicator={false}>
-          <View className="gap-y-1">
+          <View className="gap-y-1 pb-[90px]">
             <TouchableOpacity className="flex-row">
               <Image
                 source={require("../../assets/images/secondeimage.png")}
