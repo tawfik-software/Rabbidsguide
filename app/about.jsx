@@ -10,7 +10,7 @@ import {
   ImageBackground,
   Platform,
 } from "react-native";
-import React, { useState, useRef } from "react";
+import React, { useState, useLayoutEffect, useRef } from "react";
 import { useRouter, useNavigation } from "expo-router";
 
 const { width, height } = Dimensions.get("window");
@@ -54,8 +54,9 @@ const Slide = ({ item }) => {
       <ImageBackground
         source={item?.image}
         className="w-screen h-[450px] justify-center items-center"
+        style={{height: Platform.OS === "ios" ? 400: 600, top: -90}}
       />
-      <View style={{ top: 25 }}>
+      <View style={{ top: -25 }}>
         <Text
           style={styles.title}
           className="font-aProBold text-xl text-center"
@@ -78,6 +79,12 @@ const about = () => {
   const router = useRouter();
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
   const ref = useRef();
+
+  React.useLayoutEffect(() => {
+    navigation.setOptions({
+      headerShown: false,
+    });
+  }, [navigation]);
 
   const updateCurrentSlideIndex = (e) => {
     const contentOffsetX = e.nativeEvent.contentOffset.x;

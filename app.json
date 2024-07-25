@@ -14,7 +14,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.tawfikayade.Rabbidsguide"
     },
     "web": {
       "bundler": "metro",
@@ -26,6 +27,15 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "4511c091-78d0-4886-87d6-72a085f064d0"
+      }
+    },
+    "owner": "tawfik-ayade"
   }
 }
