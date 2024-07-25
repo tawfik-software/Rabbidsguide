@@ -12,7 +12,7 @@ const index = () => {
   useEffect(() => {
     setTimeout(() => {
       router.push("about");
-    }, 3000);
+    }, 30);
   });
 
   React.useLayoutEffect(() => {
@@ -25,8 +25,8 @@ const index = () => {
     <SafeAreaView className="flex-1">
       <ImageBackground className="flex-1 " source={Welcome}>
         <View className="items-center mt-20 flex-1 w-screen ">
-          <Text className="text-6xl text-white font-mRegular">Rabbids</Text>
-          <Text className="text-6xl text-white font-mRegular">Guide</Text>
+          <Text className="text-[60px] text-white font-mRegular">Rabbids</Text>
+          <Text className="text-[60px] text-white font-mRegular">Guide</Text>
         </View>
         <View>
           <Progress.Bar

@@ -16,7 +16,7 @@ import {
   Fontisto,
   MaterialCommunityIcons,
 } from "@expo/vector-icons";
-import bookmark from '../../components/svg/icons/bookmark'
+import Bookmark from "../../components/svg/icons/bookmark";
 
 const savedArticles = () => {
   return (
@@ -53,7 +53,7 @@ const savedArticles = () => {
                 </Text>
                 <View className="w-8 h-8 rounded-full bg-white absolute z-10 top-[1px] right-[-7px]">
                   <View className="w-full h-full items-center justify-center">
-                    <MaterialCommunityIcons name="bookmark" size={24} color="#FFA451" />
+                    <Bookmark color="#FFA451" />
                   </View>
                 </View>
               </TouchableOpacity>
@@ -68,7 +68,7 @@ const savedArticles = () => {
                 </Text>
                 <View className="w-8 h-8 rounded-full bg-white absolute z-10 top-[1px] right-[-7px]">
                   <View className="w-full h-full items-center justify-center">
-                  <MaterialCommunityIcons name="bookmark" size={24} color="#FFA451" />
+                    <Bookmark color="#FFA451" />
                   </View>
                 </View>
               </TouchableOpacity>
@@ -84,7 +84,7 @@ const savedArticles = () => {
                 </Text>
                 <View className="w-8 h-8 rounded-full bg-white absolute z-10 top-[1px] right-[-7px]">
                   <View className="w-full h-full items-center justify-center">
-                    <MaterialCommunityIcons name="bookmark" size={24} color="#FFA451" />
+                    <Bookmark color="#FFA451" />
                   </View>
                 </View>
               </TouchableOpacity>
@@ -99,7 +99,7 @@ const savedArticles = () => {
                 </Text>
                 <View className="w-8 h-8 rounded-full bg-white absolute z-10 top-[1px] right-[-7px]">
                   <View className="w-full h-full items-center justify-center">
-                    <MaterialCommunityIcons name="bookmark" size={24} color="#FFA451" />
+                    <Bookmark color="#FFA451" />
                   </View>
                 </View>
               </TouchableOpacity>
@@ -115,7 +115,7 @@ const savedArticles = () => {
                 </Text>
                 <View className="w-8 h-8 rounded-full bg-white absolute z-10 top-[1px] right-[-7px]">
                   <View className="w-full h-full items-center justify-center">
-                    <MaterialCommunityIcons name="bookmark" size={24} color="#FFA451" />
+                    <Bookmark color="#FFA451" />
                   </View>
                 </View>
               </TouchableOpacity>
@@ -130,7 +130,7 @@ const savedArticles = () => {
                 </Text>
                 <View className="w-8 h-8 rounded-full bg-white absolute z-10 top-[1px] right-[-7px]">
                   <View className="w-full h-full items-center justify-center">
-                    <MaterialCommunityIcons name="bookmark" size={24} color="#FFA451" />
+                    <Bookmark color="#FFA451" />
                   </View>
                 </View>
               </TouchableOpacity>
@@ -146,7 +146,7 @@ const savedArticles = () => {
                 </Text>
                 <View className="w-8 h-8 rounded-full bg-white absolute z-10 top-[1px] right-[-7px]">
                   <View className="w-full h-full items-center justify-center">
-                  <MaterialCommunityIcons name="bookmark" size={24} color="#FFA451" />
+                    <Bookmark color="#FFA451" />
                   </View>
                 </View>
               </TouchableOpacity>
@@ -161,12 +161,11 @@ const savedArticles = () => {
                 </Text>
                 <View className="w-8 h-8 rounded-full bg-white absolute z-10 top-[1px] right-[-7px]">
                   <View className="w-full h-full items-center justify-center">
-                    <MaterialCommunityIcons name="bookmark" size={24} color="#FFA451" />
+                    <Bookmark color="#FFA451" />
                   </View>
                 </View>
               </TouchableOpacity>
             </View>
-            
           </View>
         </ScrollView>
       </View>

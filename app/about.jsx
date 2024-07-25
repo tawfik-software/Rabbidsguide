@@ -54,7 +54,7 @@ const Slide = ({ item }) => {
       <ImageBackground
         source={item?.image}
         className="w-screen h-[450px] justify-center items-center"
-        style={{height: Platform.OS === "ios" ? 400: 600, top: -90}}
+        style={{ height: Platform.OS === "ios" ? 400 : 600, top: -90 }}
       />
       <View style={{ top: -25 }}>
         <Text
@@ -78,6 +78,7 @@ const about = () => {
   const navigation = useNavigation();
   const router = useRouter();
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
+  const [progressBtn, setProgressBtn] = useState(0);
   const ref = useRef();
 
   React.useLayoutEffect(() => {
@@ -101,27 +102,78 @@ const about = () => {
     }
   };
 
+  console.log(currentSlideIndex);
   const skip = () => {
-    const lastSlideIndex = slides.length - 1;
-    const offset = lastSlideIndex * width;
-    ref?.current.scrollToOffset({ offset });
-    setCurrentSlideIndex(lastSlideIndex);
+    const lastSlideIndex = currentSlideIndex - 1;
+    if (currentSlideIndex != 0) {
+      const offset = (lastSlideIndex * 1) / 2;
+      ref?.current.scrollToOffset({ offset });
+      setCurrentSlideIndex(lastSlideIndex);
+    }
   };
-
+  const ProgressBtn = () => {
+    if (currentSlideIndex == 0) {
+      return (
+        <TouchableOpacity
+          activeOpacity={0.8}
+          onPress={goToNextSlide}
+          className="bg-[#f59e4e] px-9 py-[10px] rounded-full"
+        >
+          <Text className="font-aPro text-white text-lg text-center">Next</Text>
+        </TouchableOpacity>
+      );
+    } else if (currentSlideIndex == 1) {
+      return (
+        <View className="flex-row items-center justify-between px-6">
+          <TouchableOpacity
+            activeOpacity={0.8}
+            onPress={skip}
+            className="bg-[#b8b8b8] px-9 py-[10px] rounded-full"
+          >
+            <Text className="font-aPro text-white text-lg">Back</Text>
+          </TouchableOpacity>
+          <View style={{ width: 15 }} />
+          <TouchableOpacity
+            activeOpacity={0.8}
+            onPress={goToNextSlide}
+            className="bg-[#f59e4e] px-9 py-[10px] rounded-full"
+          >
+            <Text className="font-aPro text-white text-lg">Next</Text>
+          </TouchableOpacity>
+        </View>
+      );
+    } else {
+      return (
+        <View className="flex-row items-center justify-between px-6">
+          <TouchableOpacity
+            activeOpacity={0.8}
+            onPress={skip}
+            className="bg-[#b8b8b8] px-9 py-[10px] rounded-full"
+          >
+            <Text className="font-aPro text-white text-lg">Back</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => router.push("(tabs)/home")}
+            className="bg-[#f59e4e] px-9 py-[10px] rounded-full"
+          >
+            <Text className="font-aPro text-white text-lg">Start</Text>
+          </TouchableOpacity>
+        </View>
+      );
+    }
+  };
   const Footer = () => {
     return (
       <View
         style={{
-          height: height * 0.15,
+          height: height * 0.1,
           justifyContent: "space-between",
-          paddingHorizontal: 20,
         }}
       >
         <View
           style={{
             flexDirection: "row",
             justifyContent: "center",
-            marginTop: 20,
           }}
         >
           {slides.map((_, index) => (
@@ -137,47 +189,8 @@ const about = () => {
             />
           ))}
         </View>
-
-        <View style={{ marginBottom: 20 }}>
-          {currentSlideIndex == slides.length - 1 ? (
-            <View style={{ height: 50 }}>
-              <TouchableOpacity
-                style={styles.btn}
-                onPress={() => router.push("(tabs)/home")}
-              >
-                <Text className="font-aPro text-white text-lg">
-                  GET STARTED
-                </Text>
-              </TouchableOpacity>
-            </View>
-          ) : (
-            <View style={{ flexDirection: "row" }}>
-              <TouchableOpacity
-                activeOpacity={0.8}
-                style={{
-                  borderColor: "#B8B8B8",
-                  borderWidth: 1,
-                  flex: 1,
-                  height: 50,
-                  borderRadius: 5,
-                  backgroundColor: "#B8B8B8",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-                onPress={skip}
-              >
-                <Text className="font-aPro text-white text-lg">SKIP</Text>
-              </TouchableOpacity>
-              <View style={{ width: 15 }} />
-              <TouchableOpacity
-                activeOpacity={0.8}
-                onPress={goToNextSlide}
-                style={styles.btn}
-              >
-                <Text className="font-aPro text-white text-lg">NEXT</Text>
-              </TouchableOpacity>
-            </View>
-          )}
+        <View className="mb-5 px-4">
+          <ProgressBtn />
         </View>
       </View>
     );
@@ -189,7 +202,7 @@ const about = () => {
       <FlatList
         ref={ref}
         onMomentumScrollEnd={updateCurrentSlideIndex}
-        contentContainerStyle={{ height: height * 0.75 }}
+        contentContainerStyle={{ height: height * 1 }}
         showsHorizontalScrollIndicator={false}
         horizontal
         pagingEnabled

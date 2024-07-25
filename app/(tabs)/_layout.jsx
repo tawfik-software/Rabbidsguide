@@ -3,17 +3,18 @@ import React from "react";
 import { Tabs } from "expo-router";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import TabIcon from "../../components/ui/TapIcon";
+import Bookmark from "../../components/svg/icons/bookmark";
 import {
   Ionicons,
   MaterialIcons,
   Octicons,
   FontAwesome5,
-  Entypo, 
+  Entypo,
   Fontisto,
   MaterialCommunityIcons,
 } from "@expo/vector-icons";
 import { BlurView } from "expo-blur";
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
 
 const Layout = () => {
@@ -35,7 +36,7 @@ const Layout = () => {
           tabBarStyle: {
             position: "absolute",
             height: 80,
-            ...(Platform.OS === 'ios' ? { paddingBottom: 20 } : {}),
+            ...(Platform.OS === "ios" ? { paddingBottom: 20 } : {}),
           },
           tabBarBackground: () => {
             <View
@@ -72,9 +73,7 @@ const Layout = () => {
             headerShown: false,
             tabBarIcon: ({ color, focused }) => (
               <TabIcon
-                icon={
-                  <Entypo name="map" size={24} color={color} />
-                }
+                icon={<Entypo name="map" size={24} color={color} />}
                 color={color}
                 focused={focused}
               />
@@ -87,7 +86,14 @@ const Layout = () => {
             headerShown: false,
             tabBarIcon: ({ color, focused }) => (
               <TabIcon
-                icon={<MaterialCommunityIcons name="bookmark" size={24} color={color} />}
+                icon={
+                  // <MaterialCommunityIcons
+                  //   name="bookmark"
+                  //   size={24}
+                  //   color={color}
+                  // />
+                  <Bookmark color={color} />
+                }
                 color={color}
                 focused={focused}
               />
