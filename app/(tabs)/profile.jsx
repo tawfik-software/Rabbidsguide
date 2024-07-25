@@ -253,6 +253,7 @@ const profile = () => {
           </View>
         </TouchableOpacity>
       </View> */}
+      </View>
     </SafeAreaView>
   );
 };
