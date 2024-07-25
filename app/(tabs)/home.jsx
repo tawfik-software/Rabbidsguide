@@ -20,9 +20,12 @@ const home = () => {
     <SafeAreaView className="flex-1 bg-white">
       {/* Header */}
       <View className="flex-1 px-4">
-        <View className="flex-row items-center mt-6" style={{marginTop: Platform.OS === 'ios' ? 9 : 12,}}>
+        <View
+          className="flex-row items-center mt-6"
+          style={{ marginTop: Platform.OS === "ios" ? 9 : 12 }}
+        >
           <View className="flex-1">
-            <Text className="text-gray-400 text-xs font-aPro"> 
+            <Text className="text-gray-400 text-xs font-aPro">
               Hi 👋, this is your guide for →
             </Text>
             <Text className="font-mBold text-xl">Rayman Raving Rabbids</Text>
@@ -30,12 +33,12 @@ const home = () => {
           <TouchableOpacity
             activeOpacity={0.8}
             className="ml-4"
-            onPress={() => router.push('./profile')}
+            onPress={() => router.push("./profile")}
           >
-          <Image
-            source={require("../../assets/images/firstimage.png")}
-            className="h-10 w-10 rounded-full"
-          />
+            <Image
+              source={require("../../assets/images/firstimage.png")}
+              className="h-10 w-10 rounded-full"
+            />
           </TouchableOpacity>
         </View>
 
@@ -44,11 +47,11 @@ const home = () => {
           <Text className="text-xl font-mBold">Last articles</Text>
         </View>
         <ScrollView className="flex-1" showsVerticalScrollIndicator={false}>
-          <View className="gap-y-1">
-
+          <View className="gap-y-1 pb-[84px]">
             {/* Element 1 */}
-            <TouchableOpacity className="flex-row"
-              onPress={() => router.push('ubisoft')}
+            <TouchableOpacity
+              className="flex-row"
+              onPress={() => router.push("ubisoft")}
             >
               <Image
                 source={require("../../assets/images/secondeimage.png")}
@@ -69,14 +72,15 @@ const home = () => {
                   size={16}
                   color="black"
                   style={{ position: "absolute", bottom: 0, left: 220 }}
-                /> 
+                />
               </View>
             </TouchableOpacity>
-            
+
             {/* Element 2 */}
 
-            <TouchableOpacity className="flex-row" 
-              onPress={() => router.push('user.ubisoft')}
+            <TouchableOpacity
+              className="flex-row"
+              onPress={() => router.push("user.ubisoft")}
             >
               <Image
                 source={require("../../assets/images/bodyarticles.png")}
@@ -97,14 +101,15 @@ const home = () => {
                   size={16}
                   color="black"
                   style={{ position: "absolute", bottom: 0, left: 220 }}
-                /> 
+                />
               </View>
             </TouchableOpacity>
 
             {/* Element 3 */}
 
-            <TouchableOpacity className="flex-row"
-              onPress={() => router.push('user2.ubisoft')}
+            <TouchableOpacity
+              className="flex-row"
+              onPress={() => router.push("user2.ubisoft")}
             >
               <Image
                 source={require("../../assets/images/ray.jpeg")}
@@ -125,14 +130,15 @@ const home = () => {
                   size={16}
                   color="black"
                   style={{ position: "absolute", bottom: 0, left: 220 }}
-                /> 
+                />
               </View>
             </TouchableOpacity>
 
             {/* Element 4 */}
 
-            <TouchableOpacity className="flex-row"
-              onPress={() => router.push('user3.ubisoft')}
+            <TouchableOpacity
+              className="flex-row"
+              onPress={() => router.push("user3.ubisoft")}
             >
               <Image
                 source={require("../../assets/images/raymanbody.png")}
@@ -153,14 +159,15 @@ const home = () => {
                   size={16}
                   color="black"
                   style={{ position: "absolute", bottom: 0, left: 220 }}
-                /> 
+                />
               </View>
             </TouchableOpacity>
 
             {/* Element 5 */}
 
-            <TouchableOpacity className="flex-row"
-              onPress={() => router.push('user4.ubisoft')}
+            <TouchableOpacity
+              className="flex-row"
+              onPress={() => router.push("user4.ubisoft")}
             >
               <Image
                 source={require("../../assets/images/firstimage.png")}
@@ -181,14 +188,15 @@ const home = () => {
                   size={16}
                   color="black"
                   style={{ position: "absolute", bottom: 0, left: 220 }}
-                /> 
+                />
               </View>
             </TouchableOpacity>
 
             {/* Element 6 */}
-            
-            <TouchableOpacity className="flex-row"
-              onPress={() => router.push('user5.ubisoft')}
+
+            <TouchableOpacity
+              className="flex-row"
+              onPress={() => router.push("user5.ubisoft")}
             >
               <Image
                 source={require("../../assets/images/3thmage.png")}
@@ -209,11 +217,9 @@ const home = () => {
                   size={16}
                   color="black"
                   style={{ position: "absolute", bottom: 0, left: 220 }}
-                /> 
+                />
               </View>
             </TouchableOpacity>
-
-
           </View>
         </ScrollView>
       </View>

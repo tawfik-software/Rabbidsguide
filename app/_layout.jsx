@@ -36,6 +36,18 @@ const RootLayout = () => {
         <Stack.Screen name="index" options={{ headerShown: false }} />
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen name="about" options={{ headerShown: false }} />
+        <Stack.Screen name="ubisoft" options={{ headerShown: false }} />
+        <Stack.Screen name="user.chapters" options={{ headerShown: false }} />
+        <Stack.Screen name="user2.chapters" options={{ headerShown: false }} />
+        <Stack.Screen name="user3.chapters" options={{ headerShown: false }} />
+        <Stack.Screen name="user4.chapters" options={{ headerShown: false }} />
+        <Stack.Screen name="user5.chapters" options={{ headerShown: false }} />
+        <Stack.Screen name="user6.chapters" options={{ headerShown: false }} />
+        <Stack.Screen name="user.ubisoft" options={{ headerShown: false }} />
+        <Stack.Screen name="user2.ubisoft" options={{ headerShown: false }} />
+        <Stack.Screen name="user3.ubisoft" options={{ headerShown: false }} />
+        <Stack.Screen name="user4.ubisoft" options={{ headerShown: false }} />
+        <Stack.Screen name="user5.ubisoft" options={{ headerShown: false }} />
       </Stack>
       <StatusBar backgroundColor="#fff" barStyle="dark-content" />
     </>
