@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, Platform } from "react-native";
 import React from "react";
 import { Tabs } from "expo-router";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
@@ -10,10 +10,21 @@ import {
   FontAwesome5,
   Entypo, 
   Fontisto,
+  MaterialCommunityIcons,
 } from "@expo/vector-icons";
 import { BlurView } from "expo-blur";
+import { useState, useEffect } from 'react';
+import { useNavigation } from "@react-navigation/native";
 
 const Layout = () => {
+  const navigation = useNavigation();
+
+  React.useLayoutEffect(() => {
+    navigation.setOptions({
+      headerShown: false,
+    });
+  }, [navigation]);
+
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
       <Tabs
@@ -24,6 +35,7 @@ const Layout = () => {
           tabBarStyle: {
             position: "absolute",
             height: 80,
+            ...(Platform.OS === 'ios' ? { paddingBottom: 20 } : {}),
           },
           tabBarBackground: () => {
             <View
@@ -75,7 +87,7 @@ const Layout = () => {
             headerShown: false,
             tabBarIcon: ({ color, focused }) => (
               <TabIcon
-                icon={<Fontisto name="favorite" size={24} color={color} />}
+                icon={<MaterialCommunityIcons name="bookmark" size={24} color={color} />}
                 color={color}
                 focused={focused}
               />

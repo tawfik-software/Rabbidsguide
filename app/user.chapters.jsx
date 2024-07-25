@@ -8,6 +8,12 @@ const userchapters = () => {
   const navigation = useNavigation();
   const router = useRouter();
 
+  React.useLayoutEffect(() => {
+    navigation.setOptions({
+      headerShown: false,
+    });
+  }, [navigation]);
+
   return (
     <SafeAreaView className="flex-1 bg-white">
             <View>
@@ -16,7 +22,7 @@ const userchapters = () => {
                 className="w-full h-40 items-center justify-center rounded-sm overflow-hidden"
               >
               <Ionicons name="close-outline" size={26} color="white" 
-                style={{ position: "absolute", top: -2, right: 8 }}
+                style={{ position: "absolute", top: 38, right: 8 }}
                 onPress={() => navigation.goBack()}
               />
                 <Text className="text-white font-mMedium">Chapter1</Text>
@@ -51,7 +57,7 @@ const userchapters = () => {
                   name="arrowright"
                   size={16}
                   color="black"
-                  style={{ position: "absolute", bottom: 0, left: 260 }}
+                  style={{ position: "absolute", bottom: 0, left: 257 }}
                 /> 
               </View>
             </TouchableOpacity>
@@ -77,7 +83,7 @@ const userchapters = () => {
                   name="arrowright"
                   size={16}
                   color="black"
-                  style={{ position: "absolute", bottom: 0, left: 260 }}
+                  style={{ position: "absolute", bottom: 0, left: 257 }}
                 /> 
               </View>
             </TouchableOpacity>
@@ -103,7 +109,7 @@ const userchapters = () => {
                   name="arrowright"
                   size={16}
                   color="black"
-                  style={{ position: "absolute", bottom: 0, left: 260 }}
+                  style={{ position: "absolute", bottom: 0, left: 257 }}
                 /> 
               </View>
             </TouchableOpacity>
@@ -129,7 +135,7 @@ const userchapters = () => {
                   name="arrowright"
                   size={16}
                   color="black"
-                  style={{ position: "absolute", bottom: 0, left: 260 }}
+                  style={{ position: "absolute", bottom: 0, left: 257 }}
                 /> 
               </View>
             </TouchableOpacity>
@@ -155,7 +161,7 @@ const userchapters = () => {
                   name="arrowright"
                   size={16}
                   color="black"
-                  style={{ position: "absolute", bottom: 0, left: 260 }}
+                  style={{ position: "absolute", bottom: 0, left: 257 }}
                 /> 
               </View>
             </TouchableOpacity>
@@ -181,7 +187,7 @@ const userchapters = () => {
                   name="arrowright"
                   size={16}
                   color="black"
-                  style={{ position: "absolute", bottom: 0, left: 260 }}
+                  style={{ position: "absolute", bottom: 0, left: 257 }}
                 /> 
               </View>
             </TouchableOpacity>

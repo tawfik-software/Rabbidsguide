@@ -2,14 +2,14 @@ import { View, Image, Text, SafeAreaView, ScrollView } from 'react-native'
 import React from 'react'
 import { Card } from 'react-native-elements'
 
-const ubisoft = () => {
+const userubisoft = () => {
   return (
     <SafeAreaView>
       <ScrollView>
 
       <View className="flex-1">
           <Image 
-          source={require('../assets/images/usernav.jpeg')}
+          source={require('../assets/images/bodyarticles.png')}
           className="h-44 w-96 rounded-lg top-3 left-1"
           />
 
@@ -34,7 +34,7 @@ const ubisoft = () => {
           <View className="flex">
         <View className="top-1">
           <Image 
-          source={require('../assets/images/secondeimage.png')}
+          source={require('../assets/images/usernav.jpeg')}
           className="h-44 w-96 rounded-lg top-3 left-1"
           />
         </View>
@@ -61,4 +61,4 @@ const ubisoft = () => {
   )
 }
 
-export default ubisoft
+export default userubisoft

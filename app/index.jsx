@@ -3,7 +3,10 @@ import React, { useEffect } from "react";
 import * as Progress from "react-native-progress";
 import { useRouter } from "expo-router";
 import Welcome from "../assets/images/welcome.jpeg";
+import { useNavigation } from "@react-navigation/native";
+
 const index = () => {
+  const navigation = useNavigation();
   const router = useRouter();
 
   useEffect(() => {
@@ -11,6 +14,12 @@ const index = () => {
       router.push("about");
     }, 3000);
   });
+
+  React.useLayoutEffect(() => {
+    navigation.setOptions({
+      headerShown: false,
+    });
+  }, [navigation]);
 
   return (
     <SafeAreaView className="flex-1">

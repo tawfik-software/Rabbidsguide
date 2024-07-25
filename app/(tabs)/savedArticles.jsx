@@ -14,13 +14,16 @@ import {
   Octicons,
   FontAwesome5,
   Fontisto,
+  MaterialCommunityIcons,
 } from "@expo/vector-icons";
+import bookmark from '../../components/svg/icons/bookmark'
+
 const savedArticles = () => {
   return (
     <SafeAreaView className="flex-1 bg-white">
       {/* Header */}
       <View className="flex-1 px-4">
-        <View className="flex-row items-center mt-14">
+        <View className="flex-row items-center">
           <View className="flex-1">
             <Text className="text-gray-400 text-sm font-aPro">
               Hi 👋, this is your guide for →
@@ -50,7 +53,7 @@ const savedArticles = () => {
                 </Text>
                 <View className="w-8 h-8 rounded-full bg-white absolute z-10 top-[1px] right-[-7px]">
                   <View className="w-full h-full items-center justify-center">
-                    <Fontisto name="bookmark" size={24} color="black" />
+                    <MaterialCommunityIcons name="bookmark" size={24} color="#FFA451" />
                   </View>
                 </View>
               </TouchableOpacity>
@@ -65,7 +68,7 @@ const savedArticles = () => {
                 </Text>
                 <View className="w-8 h-8 rounded-full bg-white absolute z-10 top-[1px] right-[-7px]">
                   <View className="w-full h-full items-center justify-center">
-                    <Fontisto name="bookmark" size={24} color="black" />
+                  <MaterialCommunityIcons name="bookmark" size={24} color="#FFA451" />
                   </View>
                 </View>
               </TouchableOpacity>
@@ -81,7 +84,7 @@ const savedArticles = () => {
                 </Text>
                 <View className="w-8 h-8 rounded-full bg-white absolute z-10 top-[1px] right-[-7px]">
                   <View className="w-full h-full items-center justify-center">
-                    <Fontisto name="bookmark" size={24} color="black" />
+                    <MaterialCommunityIcons name="bookmark" size={24} color="#FFA451" />
                   </View>
                 </View>
               </TouchableOpacity>
@@ -96,7 +99,7 @@ const savedArticles = () => {
                 </Text>
                 <View className="w-8 h-8 rounded-full bg-white absolute z-10 top-[1px] right-[-7px]">
                   <View className="w-full h-full items-center justify-center">
-                    <Fontisto name="bookmark" size={24} color="black" />
+                    <MaterialCommunityIcons name="bookmark" size={24} color="#FFA451" />
                   </View>
                 </View>
               </TouchableOpacity>
@@ -112,7 +115,7 @@ const savedArticles = () => {
                 </Text>
                 <View className="w-8 h-8 rounded-full bg-white absolute z-10 top-[1px] right-[-7px]">
                   <View className="w-full h-full items-center justify-center">
-                    <Fontisto name="bookmark" size={24} color="black" />
+                    <MaterialCommunityIcons name="bookmark" size={24} color="#FFA451" />
                   </View>
                 </View>
               </TouchableOpacity>
@@ -127,7 +130,7 @@ const savedArticles = () => {
                 </Text>
                 <View className="w-8 h-8 rounded-full bg-white absolute z-10 top-[1px] right-[-7px]">
                   <View className="w-full h-full items-center justify-center">
-                    <Fontisto name="bookmark" size={24} color="black" />
+                    <MaterialCommunityIcons name="bookmark" size={24} color="#FFA451" />
                   </View>
                 </View>
               </TouchableOpacity>
@@ -143,7 +146,7 @@ const savedArticles = () => {
                 </Text>
                 <View className="w-8 h-8 rounded-full bg-white absolute z-10 top-[1px] right-[-7px]">
                   <View className="w-full h-full items-center justify-center">
-                    <Fontisto name="bookmark" size={24} color="black" />
+                  <MaterialCommunityIcons name="bookmark" size={24} color="#FFA451" />
                   </View>
                 </View>
               </TouchableOpacity>
@@ -158,7 +161,7 @@ const savedArticles = () => {
                 </Text>
                 <View className="w-8 h-8 rounded-full bg-white absolute z-10 top-[1px] right-[-7px]">
                   <View className="w-full h-full items-center justify-center">
-                    <Fontisto name="bookmark" size={24} color="black" />
+                    <MaterialCommunityIcons name="bookmark" size={24} color="#FFA451" />
                   </View>
                 </View>
               </TouchableOpacity>
