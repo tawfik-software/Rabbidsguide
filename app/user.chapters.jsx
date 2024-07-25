@@ -2,9 +2,11 @@ import { View, Image, TouchableOpacity, ScrollView, ImageBackground, SafeAreaVie
 import React, { useLayoutEffect } from 'react'
 import { AntDesign, Ionicons } from "@expo/vector-icons";
 import { useNavigation } from '@react-navigation/native';
+import { useRouter } from 'expo-router';
 
 const userchapters = () => {
   const navigation = useNavigation();
+  const router = useRouter();
 
   return (
     <SafeAreaView className="flex-1 bg-white">
@@ -28,7 +30,9 @@ const userchapters = () => {
           <View className="gap-y-1">
 
             {/* Element 1 */}
-            <TouchableOpacity className="flex-row">
+            <TouchableOpacity className="flex-row"
+              onPress={() => router.push('ubisoft')}
+            >
               <Image
                 source={require("../assets/images/secondeimage.png")}
                 className="h-28 w-28 p-4 rounded-xl"
