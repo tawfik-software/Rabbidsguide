@@ -7,20 +7,27 @@ import {
   ScrollView,
   ImageBackground,
 } from "react-native";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
-import {
-  Ionicons,
-  MaterialIcons,
-  Octicons,
-  FontAwesome5,
-} from "@expo/vector-icons";
 import Thmage from "../../assets/images/3thmage.png";
 import Img2 from "../../assets/images/secondeimage.png";
 import { useRouter } from "expo-router";
+import { useSQLiteContext } from "expo-sqlite/next";
 
 const chapters = () => {
+  const [chapters, setChapters] = useState("");
+  const db = useSQLiteContext();
 
+  useEffect(() => {
+    db.withTransactionAsync(async () => {
+      await getChaptersData();
+    });
+  }, [db]);
+
+  async function getChaptersData() {
+    const result = await db.getAllAsync(`SELECT * FROM chapters`);
+    console.log(result);
+  }
   const router = useRouter();
 
   return (
@@ -43,9 +50,9 @@ const chapters = () => {
         </View>
         <ScrollView className="flex-1" showsVerticalScrollIndicator={false}>
           <View className="gap-y-4 pb-[90px]">
-            <TouchableOpacity onPress={() => router.push('user.chapters')}>
+            <TouchableOpacity onPress={() => router.push("user.chapters")}>
               <ImageBackground
-                source={require('../../assets/images/elementmap.jpeg')}
+                source={require("../../assets/images/elementmap.jpeg")}
                 className="w-full h-40 items-center justify-center rounded-xl overflow-hidden"
               >
                 <Text className="text-white font-mMedium">Chapter1</Text>
@@ -54,9 +61,9 @@ const chapters = () => {
                 </Text>
               </ImageBackground>
             </TouchableOpacity>
-            <TouchableOpacity onPress={() => router.push('user2.chapters')}>
+            <TouchableOpacity onPress={() => router.push("user2.chapters")}>
               <ImageBackground
-                source={require('../../assets/images/firstimage.png')}
+                source={require("../../assets/images/firstimage.png")}
                 className="w-full h-40 items-center justify-center rounded-xl overflow-hidden"
               >
                 <Text className="text-white font-mMedium">Chapter2</Text>
@@ -65,9 +72,9 @@ const chapters = () => {
                 </Text>
               </ImageBackground>
             </TouchableOpacity>
-            <TouchableOpacity onPress={() => router.push('user3.chapters')}>
+            <TouchableOpacity onPress={() => router.push("user3.chapters")}>
               <ImageBackground
-                source={require('../../assets/images/ray.jpeg')}
+                source={require("../../assets/images/ray.jpeg")}
                 className="w-full h-40 items-center justify-center rounded-xl overflow-hidden"
               >
                 <Text className="text-white font-mMedium">Chapter3</Text>
@@ -76,9 +83,9 @@ const chapters = () => {
                 </Text>
               </ImageBackground>
             </TouchableOpacity>
-            <TouchableOpacity onPress={() => router.push('user4.chapters')}>
+            <TouchableOpacity onPress={() => router.push("user4.chapters")}>
               <ImageBackground
-                source={require('../../assets/images/welcome.jpeg')}
+                source={require("../../assets/images/welcome.jpeg")}
                 className="w-full h-40 items-center justify-center rounded-xl overflow-hidden"
               >
                 <Text className="text-white font-mMedium">Chapter4</Text>
@@ -87,7 +94,7 @@ const chapters = () => {
                 </Text>
               </ImageBackground>
             </TouchableOpacity>
-            <TouchableOpacity onPress={() => router.push('user5.chapters')}>
+            <TouchableOpacity onPress={() => router.push("user5.chapters")}>
               <ImageBackground
                 source={Thmage}
                 className="w-full h-40 items-center justify-center rounded-xl overflow-hidden"
@@ -98,7 +105,7 @@ const chapters = () => {
                 </Text>
               </ImageBackground>
             </TouchableOpacity>
-            <TouchableOpacity onPress={() => router.push('user.chapters')}>
+            <TouchableOpacity onPress={() => router.push("user.chapters")}>
               <ImageBackground
                 source={Img2}
                 className="w-full h-40 items-center justify-center rounded-xl overflow-hidden"
