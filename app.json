@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Rabbidsguide",
-    "slug": "Rabbidsguide",
+    "slug": "rabbidsguide",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -34,9 +34,9 @@
         "origin": false
       },
       "eas": {
-        "projectId": "4511c091-78d0-4886-87d6-72a085f064d0"
+        "projectId": "b4ae8ad9-269a-4757-8e1a-d41b8ee9e346"
       }
     },
-    "owner": "tawfik-ayade"
+    "owner": "hamza_bouchtarate"
   }
 }
