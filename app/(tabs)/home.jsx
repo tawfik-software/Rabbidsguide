@@ -21,8 +21,8 @@ const home = () => {
       {/* Header */}
       <View className="flex-1 px-4 py-10">
         <View
-          className="flex-row items-center mt-6"
-          style={{ marginTop: Platform.OS === "ios" ? 9 : 12 }}
+          className="flex-row items-center "
+          style={{ marginTop: Platform.OS === "ios" ? 9 : 10 }}
         >
           <View className="flex-1">
             <Text className="text-gray-400 text-xs font-aPro">
@@ -206,7 +206,7 @@ const home = () => {
                   style={{
                     position: "absolute",
                     bottom: 0,
-                    left: Platform.OS === "ios" ? 120 : 220,
+                    left: Platform.OS === "ios" ? 12 : 220,
                   }}
                 />
               </View>
