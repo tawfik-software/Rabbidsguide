@@ -16,6 +16,7 @@ import {
 import { BlurView } from "expo-blur";
 import { useState, useEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
+import HomeTab from '../../components/svg/icons/home'
 
 const Layout = () => {
   const navigation = useNavigation();
@@ -60,7 +61,7 @@ const Layout = () => {
             headerShown: false,
             tabBarIcon: ({ color, focused }) => (
               <TabIcon
-                icon={<Octicons name="home" size={24} color={color} />}
+                icon={<HomeTab />}
                 color={color}
                 focused={focused}
               />

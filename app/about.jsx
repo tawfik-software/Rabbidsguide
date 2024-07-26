@@ -56,7 +56,7 @@ const Slide = ({ item }) => {
         className="w-screen h-[450px] justify-center items-center"
         style={{ height: Platform.OS === "ios" ? 400 : 600, top: -90 }}
       />
-      <View style={{ top: -25 }}>
+      <View style={{ top: -45 }}>
         <Text
           style={styles.title}
           className="font-aProBold text-xl text-center"

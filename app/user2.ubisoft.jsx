@@ -10,10 +10,10 @@ const user2ubisoft = () => {
       <View className="flex-1">
           <Image 
           source={require('../assets/images/ray.jpeg')}
-          className="h-44 w-96 rounded-lg top-3 left-1"
+          className="h-44 w-96 rounded-lg top-6 left-1"
           />
 
-          <View className="top-4 left-1">
+          <View className="top-5 left-3">
           <Text className="text-xs leading-4 w-auto">
           Ubisoft, I say this respectfully: please use your amazing IPs in more creative 
           ways that appeal to your community rather than alienating your fanbase through,

@@ -38,7 +38,7 @@ const chapters = () => {
             className="h-10 w-10 rounded-full"
           />
         </View>
-        <View className="mt-6 mb-2">
+        <View className="pt-3">
           <Text className="text-xl font-mBold">Chapters</Text>
         </View>
         <ScrollView className="flex-1" showsVerticalScrollIndicator={false}>

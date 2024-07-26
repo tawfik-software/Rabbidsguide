@@ -23,7 +23,7 @@ const savedArticles = () => {
     <SafeAreaView className="flex-1 bg-white">
       {/* Header */}
       <View className="flex-1 px-4">
-        <View className="flex-row items-center">
+        <View className="flex-row items-center top-5">
           <View className="flex-1">
             <Text className="text-gray-400 text-sm font-aPro">
               Hi 👋, this is your guide for →
@@ -37,7 +37,7 @@ const savedArticles = () => {
         </View>
 
         {/* Body */}
-        <View className="mt-4 mb-2">
+        <View className="mt-4 mb-2 top-3">
           <Text className="text-xl font-mBold">Saved articles</Text>
         </View>
         <ScrollView className="flex-1" showsVerticalScrollIndicator={false}>

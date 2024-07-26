@@ -21,7 +21,7 @@ const home = () => {
       {/* Header */}
       <View className="flex-1 px-4">
         <View
-          className="flex-row items-center mt-6"
+          className="flex-row items-center top-4"
           style={{ marginTop: Platform.OS === "ios" ? 9 : 12 }}
         >
           <View className="flex-1">
@@ -43,7 +43,7 @@ const home = () => {
         </View>
 
         {/* Body */}
-        <View className="mt-4 mb-2">
+        <View className="mt-4 mb-2 top-3">
           <Text className="text-xl font-mBold">Last articles</Text>
         </View>
         <ScrollView className="flex-1" showsVerticalScrollIndicator={false}>
