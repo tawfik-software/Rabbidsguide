@@ -1,5 +1,5 @@
 import { Text, View, SafeAreaView, ImageBackground } from "react-native";
-import React, { useEffect } from "react";
+import React, { useEffect, useLayoutEffect } from "react";
 import * as Progress from "react-native-progress";
 import { useRouter } from "expo-router";
 import Welcome from "../assets/images/welcome.jpeg";
@@ -12,10 +12,10 @@ const index = () => {
   useEffect(() => {
     setTimeout(() => {
       router.push("about");
-    }, 30);
+    }, 3000);
   });
 
-  React.useLayoutEffect(() => {
+  useLayoutEffect(() => {
     navigation.setOptions({
       headerShown: false,
     });

@@ -6,19 +6,27 @@ import {
   TouchableOpacity,
   ScrollView,
 } from "react-native";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
-import {
-  Ionicons,
-  MaterialIcons,
-  Octicons,
-  FontAwesome5,
-  Fontisto,
-  MaterialCommunityIcons,
-} from "@expo/vector-icons";
+import { useSQLiteContext } from "expo-sqlite/next";
 import Bookmark from "../../components/svg/icons/bookmark";
 
 const savedArticles = () => {
+  const db = useSQLiteContext();
+
+  const [articles, setArticle] = useState([]);
+
+  async function getArticlesData() {
+    const result = await db.getAllAsync(`SELECT * FROM articles`);
+    console.log(result);
+  }
+
+  useEffect(() => {
+    db.withTransactionAsync(async () => {
+      await getArticlesData();
+    });
+  }, [db]);
+
   return (
     <SafeAreaView className="flex-1 bg-white">
       {/* Header */}
