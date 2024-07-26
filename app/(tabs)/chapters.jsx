@@ -6,6 +6,7 @@ import {
   TouchableOpacity,
   ScrollView,
   ImageBackground,
+  Platform,
 } from "react-native";
 import React, { useState, useEffect } from "react";
 import { useRouter } from "expo-router";
@@ -45,7 +46,7 @@ const Chapters = () => {
       <View className="flex-1 px-4">
         <View className="flex-row items-center mt-10">
           <View className="flex-1">
-            <Text className="text-gray-400 text-sm font-aPro">
+            <Text className="text-gray-400 text-xs font-aPro">
               Hi 👋, this is your guide for →
             </Text>
             <Text className="font-mBold text-xl">Rayman Raving Rabbids</Text>
@@ -55,7 +56,7 @@ const Chapters = () => {
             className="h-10 w-10 rounded-full"
           />
         </View>
-        <View className="mt-6 mb-2">
+        <View className="pt-3">
           <Text className="text-xl font-mBold">Chapters</Text>
         </View>
         <ScrollView className="flex-1" showsVerticalScrollIndicator={false}>

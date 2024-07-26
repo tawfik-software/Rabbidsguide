@@ -21,8 +21,8 @@ const home = () => {
       {/* Header */}
       <View className="flex-1 px-4 py-10">
         <View
-          className="flex-row items-center "
-          style={{ marginTop: Platform.OS === "ios" ? 9 : 10 }}
+          className="flex-row items-center mt-6"
+          style={{ marginTop: Platform.OS === "ios" ? 9 : 12 }}
         >
           <View className="flex-1">
             <Text className="text-gray-400 text-xs font-aPro">
@@ -43,7 +43,7 @@ const home = () => {
         </View>
 
         {/* Body */}
-        <View className="mt-4 mb-2">
+        <View className="mt-4 mb-2 top-3">
           <Text className="text-xl font-mBold">Last articles</Text>
         </View>
         <ScrollView className="flex-1" showsVerticalScrollIndicator={false}>
@@ -74,7 +74,7 @@ const home = () => {
                   style={{
                     position: "absolute",
                     bottom: 0,
-                    left: Platform.OS === "ios" ? 120 : 220,
+                    left: Platform.OS === "ios" ? 246 : 345,
                   }}
                 />
               </View>
@@ -107,7 +107,7 @@ const home = () => {
                   style={{
                     position: "absolute",
                     bottom: 0,
-                    left: Platform.OS === "ios" ? 120 : 220,
+                    left: Platform.OS === "ios" ? 246 : 345,
                   }}
                 />
               </View>
@@ -140,7 +140,7 @@ const home = () => {
                   style={{
                     position: "absolute",
                     bottom: 0,
-                    left: Platform.OS === "ios" ? 120 : 220,
+                    left: Platform.OS === "ios" ? 246 : 345,
                   }}
                 />
               </View>
@@ -173,7 +173,7 @@ const home = () => {
                   style={{
                     position: "absolute",
                     bottom: 0,
-                    left: Platform.OS === "ios" ? 120 : 220,
+                    left: Platform.OS === "ios" ? 246 : 345,
                   }}
                 />
               </View>
@@ -206,7 +206,7 @@ const home = () => {
                   style={{
                     position: "absolute",
                     bottom: 0,
-                    left: Platform.OS === "ios" ? 12 : 220,
+                    left: Platform.OS === "ios" ? 120 : 220,
                   }}
                 />
               </View>
@@ -239,7 +239,7 @@ const home = () => {
                   style={{
                     position: "absolute",
                     bottom: 0,
-                    left: Platform.OS === "ios" ? 120 : 220,
+                    left: Platform.OS === "ios" ? 246 : 345,
                   }}
                 />
               </View>

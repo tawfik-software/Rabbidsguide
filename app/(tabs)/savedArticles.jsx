@@ -5,6 +5,7 @@ import {
   SafeAreaView,
   TouchableOpacity,
   ScrollView,
+  Platform,
 } from "react-native";
 import React, { useState, useEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
@@ -45,7 +46,7 @@ const savedArticles = () => {
         </View>
 
         {/* Body */}
-        <View className="mt-4 mb-2">
+        <View className="mt-4 mb-2 top-3">
           <Text className="text-xl font-mBold">Saved articles</Text>
         </View>
         <ScrollView className="flex-1" showsVerticalScrollIndicator={false}>

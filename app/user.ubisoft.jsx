@@ -1,18 +1,40 @@
 import { View, Image, Text, SafeAreaView, ScrollView } from "react-native";
 import React from "react";
 import { Card } from "react-native-elements";
+import { useNavigation } from "@react-navigation/native";
+import Ionicons from "react-native-vector-icons/Ionicons";
 
 const userubisoft = () => {
-  return (
-    <SafeAreaView>
-      <ScrollView>
-        <View className="flex-1">
-          <Image
-            source={require("../assets/images/bodyarticles.png")}
-            className="h-44 w-96 rounded-lg top-3 left-1"
-          />
+  const navigation = useNavigation();
 
-          <View className="top-4 left-1">
+  React.useLayoutEffect(() => {
+    navigation.setOptions({
+      headerShown: false,
+    });
+  }, [navigation]);
+
+  return (
+    <SafeAreaView className="flex-1 bg-white">
+          <View className="flex-row items-center p-4 bg-white">
+              <Text className="flex-1 font-mRegular text-lg font-bold text-center right-20">Rayman Raving Rabbids</Text>
+              <Ionicons
+                name="close-outline"
+                size={26}
+                color="black"
+                style={{ position: "absolute", top: 18, right: 16,}}
+                onPress={() => navigation.goBack()}
+              />
+              <View className="absolute bottom-0 left-0 right-0 h-px bg-gray-400"/>
+          </View>
+      <ScrollView className="flex-1 mt-4">
+        <View className="p-4">
+          <View className="">
+            <View className="py-4">
+              <Image
+                source={require("../assets/images/bodyarticles.png")}
+                className="h-44 w-full rounded-lg py-4"
+              />
+            </View>
             <Text className="text-xs leading-4 w-auto">
               Ubisoft, I say this respectfully: please use your amazing IPs in
               more creative ways that appeal to your community rather than
@@ -33,16 +55,15 @@ const userubisoft = () => {
               your fanbase through, ways that appeal to your community rather
             </Text>
           </View>
-
-          <View className="flex">
-            <View className="top-1">
+          <View>
+            <View className="py-4">
               <Image
                 source={require("../assets/images/usernav.jpeg")}
-                className="h-44 w-96 rounded-lg top-3 left-1"
+                className="h-44 w-full rounded-lg "
               />
             </View>
 
-            <View className="top-4 left-1">
+            <View className="">
               <Text className="text-xs leading-4 w-auto">
                 Ubisoft, I say this respectfully: please use your amazing IPs in
                 more creative ways that appeal to your community rather than
