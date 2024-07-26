@@ -76,7 +76,6 @@ const Slide = ({ item }) => {
 };
 
 const about = () => {
-  const [chapters, setChapters] = useState("");
   const db = useSQLiteContext();
 
   useEffect(() => {
@@ -93,7 +92,6 @@ const about = () => {
   const navigation = useNavigation();
   const router = useRouter();
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
-  const [progressBtn, setProgressBtn] = useState(0);
   const ref = useRef();
 
   useLayoutEffect(() => {
