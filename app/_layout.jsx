@@ -1,10 +1,31 @@
 import { View, Text } from "react-native";
-import React, { useLayoutEffect, useEffect } from "react";
+import React, { useLayoutEffect, useEffect, useState } from "react";
 import { Stack, SplashScreen } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import { useFonts } from "expo-font";
+import * as FileSystem from "expo-file-system";
+import { Asset } from "expo-asset";
+import { SQLiteProvider } from "expo-sqlite/next";
+
+const loadDatabase = async () => {
+  const dbName = "rabbitsguide.db";
+  const dbAsset = require("../assets/database/rabbitsguide.db");
+  const dbUri = Asset.fromModule(dbAsset).uri;
+  const dbFilePath = `${FileSystem.documentDirectory}SQLite/${dbName}`;
+
+  const fileInfo = await FileSystem.getInfoAsync(dbFilePath);
+  if (!fileInfo.exists) {
+    await FileSystem.makeDirectoryAsync(
+      `${FileSystem.documentDirectory}SQLite`,
+      { intermediates: true }
+    );
+    await FileSystem.downloadAsync(dbUri, dbFilePath);
+  }
+};
 
 const RootLayout = () => {
+  const [dbLoaded, setDbLoaded] = useState(false);
+
   const [fontsLoaded, error] = useFonts({
     "MuseoModerno-Thin": require("../assets/fonts/MuseoModerno-Thin.ttf"),
     "MuseoModerno-ExtraLight": require("../assets/fonts/MuseoModerno-ExtraLight.ttf"),
@@ -19,19 +40,24 @@ const RootLayout = () => {
     "Abel-Pro-Bold": require("../assets/fonts/Abel-Pro-Bold.otf"),
   });
   useEffect(() => {
+    loadDatabase()
+      .then(() => setDbLoaded(true))
+      .catch((e) => console.error(e));
+
     if (error) throw error;
-    if (fontsLoaded) {
+    if (fontsLoaded && dbLoaded) {
       SplashScreen.hideAsync();
     }
-  }, [fontsLoaded, error]);
+  }, [fontsLoaded, error, dbLoaded]);
   if (!fontsLoaded) {
     return null;
   }
   if (!fontsLoaded && !error) {
     return null;
   }
+
   return (
-    <>
+    <SQLiteProvider databaseName="rabbitsguide.db">
       <Stack>
         <Stack.Screen name="index" options={{ headerShown: false }} />
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
@@ -48,9 +74,9 @@ const RootLayout = () => {
         <Stack.Screen name="user3.ubisoft" options={{ headerShown: false }} />
         <Stack.Screen name="user4.ubisoft" options={{ headerShown: false }} />
         <Stack.Screen name="user5.ubisoft" options={{ headerShown: false }} />
+        <StatusBar backgroundColor="#fff" barStyle="dark-content" />
       </Stack>
-      <StatusBar backgroundColor="#fff" barStyle="dark-content" />
-    </>
+    </SQLiteProvider>
   );
 };
 

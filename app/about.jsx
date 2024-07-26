@@ -10,8 +10,9 @@ import {
   ImageBackground,
   Platform,
 } from "react-native";
-import React, { useState, useLayoutEffect, useRef } from "react";
+import React, { useState, useLayoutEffect, useRef, useEffect } from "react";
 import { useRouter, useNavigation } from "expo-router";
+import { useSQLiteContext } from "expo-sqlite/next";
 
 const { width, height } = Dimensions.get("window");
 
@@ -53,8 +54,8 @@ const Slide = ({ item }) => {
     >
       <ImageBackground
         source={item?.image}
-        className="w-screen h-[450px] justify-center items-center"
-        style={{ height: Platform.OS === "ios" ? 400 : 600, top: -90 }}
+        className="w-screen h-[600px] justify-center items-center"
+        style={{ top: -90 }}
       />
       <View style={{ top: -25 }}>
         <Text
@@ -75,13 +76,27 @@ const Slide = ({ item }) => {
 };
 
 const about = () => {
+  const [chapters, setChapters] = useState("");
+  const db = useSQLiteContext();
+
+  useEffect(() => {
+    db.withTransactionAsync(async () => {
+      await getChaptersData();
+    });
+  }, [db]);
+
+  async function getChaptersData() {
+    const result = await db.getAllAsync(`SELECT * FROM chapters`);
+    console.log(result);
+  }
+
   const navigation = useNavigation();
   const router = useRouter();
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
   const [progressBtn, setProgressBtn] = useState(0);
   const ref = useRef();
 
-  React.useLayoutEffect(() => {
+  useLayoutEffect(() => {
     navigation.setOptions({
       headerShown: false,
     });
