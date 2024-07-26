@@ -31,8 +31,11 @@ const savedArticles = () => {
   return (
     <SafeAreaView className="flex-1 bg-white">
       {/* Header */}
-      <View className="flex-1 px-4">
-        <View className="flex-row items-center mt-10">
+      <View className="flex-1 px-4 py-10">
+        <View
+          className="flex-row items-center"
+          style={{ marginTop: Platform.OS === "ios" ? -28 : 12 }}
+        >
           <View className="flex-1">
             <Text className="text-gray-400 text-sm font-aPro">
               Hi 👋, this is your guide for →

@@ -43,8 +43,11 @@ const Chapters = () => {
 
   return (
     <SafeAreaView className="flex-1 bg-white">
-      <View className="flex-1 px-4">
-        <View className="flex-row items-center mt-10">
+      <View className="flex-1 px-4 py-10">
+        <View
+          className="flex-row items-center"
+          style={{ marginTop: Platform.OS === "ios" ? -28 : 12 }}
+        >
           <View className="flex-1">
             <Text className="text-gray-400 text-xs font-aPro">
               Hi 👋, this is your guide for →
@@ -60,7 +63,7 @@ const Chapters = () => {
           <Text className="text-xl font-mBold">Chapters</Text>
         </View>
         <ScrollView className="flex-1" showsVerticalScrollIndicator={false}>
-          <View className="gap-y-4 pb-[90px]">
+          <View className="gap-y-4 pb-[45px]">
             {chapters.length === 0 ? (
               <Text>Loading...</Text>
             ) : (
@@ -83,6 +86,17 @@ const Chapters = () => {
                 </TouchableOpacity>
               ))
             )}
+            <TouchableOpacity onPress={() => router.push("user.chapters")}>
+              <ImageBackground
+                source={require("../../assets/images/ray.jpeg")}
+                className="w-full h-40 items-center justify-center rounded-xl overflow-hidden"
+              >
+                <Text className="text-white font-mMedium">Chapter4</Text>
+                <Text className="text-white font-mBold">
+                  Fancomic Rayman Nightmarish
+                </Text>
+              </ImageBackground>
+            </TouchableOpacity>
           </View>
         </ScrollView>
       </View>
