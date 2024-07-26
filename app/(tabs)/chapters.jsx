@@ -91,7 +91,7 @@ const Chapters = () => {
                 source={require("../../assets/images/ray.jpeg")}
                 className="w-full h-40 items-center justify-center rounded-xl overflow-hidden"
               >
-                <Text className="text-white font-mMedium">Chapter4</Text>
+                <Text className="text-white font-mMedium">Chapter 4</Text>
                 <Text className="text-white font-mBold">
                   Fancomic Rayman Nightmarish
                 </Text>

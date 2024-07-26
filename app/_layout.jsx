@@ -9,7 +9,7 @@ import { SQLiteProvider } from "expo-sqlite/next";
 
 const loadDatabase = async () => {
   const dbName = "rabbitsguide.db";
-  const dbAsset = require("../assets/database/rabbitsguide.db");
+  const dbAsset = require("../assets/rabbitsguide.db");
   const dbUri = Asset.fromModule(dbAsset).uri;
   const dbFilePath = `${FileSystem.documentDirectory}SQLite/${dbName}`;
 
