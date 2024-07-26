@@ -20,28 +20,18 @@ const home = () => {
     <SafeAreaView className="flex-1 bg-white">
       {/* Header */}
       <View className="flex-1 px-4 py-10">
-        <View
-          className="flex-row items-center mt-6"
-          style={{ marginTop: Platform.OS === "ios" ? 9 : 12 }}
-        >
+        <View className="flex-row items-center mt-10">
           <View className="flex-1">
             <Text className="text-gray-400 text-xs font-aPro">
               Hi 👋, this is your guide for →
             </Text>
             <Text className="font-mBold text-xl">Rayman Raving Rabbids</Text>
           </View>
-          <TouchableOpacity
-            activeOpacity={0.8}
-            className="ml-4"
-            onPress={() => router.push("./profile")}
-          >
-            <Image
-              source={require("../../assets/images/firstimage.png")}
-              className="h-10 w-10 rounded-full"
-            />
-          </TouchableOpacity>
+          <Image
+            source={require("../../assets/images/firstimage.png")}
+            className="h-10 w-10 rounded-full"
+          />
         </View>
-
         {/* Body */}
         <View className="mt-4 mb-2 top-3">
           <Text className="text-xl font-mBold">Last articles</Text>
