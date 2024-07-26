@@ -4,6 +4,7 @@ import { Tabs } from "expo-router";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import TabIcon from "../../components/ui/TapIcon";
 import Bookmark from "../../components/svg/icons/bookmark";
+import Home from "../../components/svg/icons/home";
 import {
   Ionicons,
   MaterialIcons,
@@ -60,7 +61,7 @@ const Layout = () => {
             headerShown: false,
             tabBarIcon: ({ color, focused }) => (
               <TabIcon
-                icon={<Octicons name="home" size={24} color={color} />}
+                icon={<Home color={color} />}
                 color={color}
                 focused={focused}
               />
