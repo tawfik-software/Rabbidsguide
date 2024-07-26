@@ -19,10 +19,10 @@ const home = () => {
   return (
     <SafeAreaView className="flex-1 bg-white">
       {/* Header */}
-      <View className="flex-1 px-4">
+      <View className="flex-1 px-4 py-10">
         <View
           className="flex-row items-center top-4"
-          style={{ marginTop: Platform.OS === "ios" ? 9 : 12 }}
+          style={{ marginTop: Platform.OS === "ios" ? - 57 : - 90 }}
         >
           <View className="flex-1">
             <Text className="text-gray-400 text-xs font-aPro">
@@ -47,7 +47,7 @@ const home = () => {
           <Text className="text-xl font-mBold">Last articles</Text>
         </View>
         <ScrollView className="flex-1" showsVerticalScrollIndicator={false}>
-          <View className="gap-y-1 pb-[84px]">
+          <View className="gap-y-1 pb-[55px]">
             {/* Element 1 */}
             <TouchableOpacity
               className="flex-row"
@@ -71,7 +71,11 @@ const home = () => {
                   name="arrowright"
                   size={16}
                   color="black"
-                  style={{ position: "absolute", bottom: 0, left: 220 }}
+                  style={{
+                    position: "absolute",
+                    bottom: 0,
+                    left: Platform.OS === "ios" ? 246 : 345,
+                  }}
                 />
               </View>
             </TouchableOpacity>
@@ -100,7 +104,11 @@ const home = () => {
                   name="arrowright"
                   size={16}
                   color="black"
-                  style={{ position: "absolute", bottom: 0, left: 220 }}
+                  style={{
+                    position: "absolute",
+                    bottom: 0,
+                    left: Platform.OS === "ios" ? 246 : 345,
+                  }}
                 />
               </View>
             </TouchableOpacity>
@@ -129,7 +137,11 @@ const home = () => {
                   name="arrowright"
                   size={16}
                   color="black"
-                  style={{ position: "absolute", bottom: 0, left: 220 }}
+                  style={{
+                    position: "absolute",
+                    bottom: 0,
+                    left: Platform.OS === "ios" ? 246 : 345,
+                  }}
                 />
               </View>
             </TouchableOpacity>
@@ -158,7 +170,11 @@ const home = () => {
                   name="arrowright"
                   size={16}
                   color="black"
-                  style={{ position: "absolute", bottom: 0, left: 220 }}
+                  style={{
+                    position: "absolute",
+                    bottom: 0,
+                    left: Platform.OS === "ios" ? 246 : 345,
+                  }}
                 />
               </View>
             </TouchableOpacity>
@@ -187,7 +203,11 @@ const home = () => {
                   name="arrowright"
                   size={16}
                   color="black"
-                  style={{ position: "absolute", bottom: 0, left: 220 }}
+                  style={{
+                    position: "absolute",
+                    bottom: 0,
+                    left: Platform.OS === "ios" ? 246 : 345,
+                  }}
                 />
               </View>
             </TouchableOpacity>
@@ -216,7 +236,11 @@ const home = () => {
                   name="arrowright"
                   size={16}
                   color="black"
-                  style={{ position: "absolute", bottom: 0, left: 220 }}
+                  style={{
+                    position: "absolute",
+                    bottom: 0,
+                    left: Platform.OS === "ios" ? 246 : 345,
+                  }}
                 />
               </View>
             </TouchableOpacity>

@@ -5,6 +5,7 @@ import {
   SafeAreaView,
   TouchableOpacity,
   ScrollView,
+  Platform,
 } from "react-native";
 import React, { useState, useEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
@@ -31,7 +32,9 @@ const savedArticles = () => {
     <SafeAreaView className="flex-1 bg-white">
       {/* Header */}
       <View className="flex-1 px-4">
-        <View className="flex-row items-center top-5">
+        <View className="flex-row items-center top-5"
+          style={{ marginTop: Platform.OS === "ios" ? - 18 : - 40 }}
+        >
           <View className="flex-1">
             <Text className="text-gray-400 text-sm font-aPro">
               Hi 👋, this is your guide for →

@@ -6,6 +6,7 @@ import {
   TouchableOpacity,
   ScrollView,
   ImageBackground,
+  Platform,
 } from "react-native";
 import React, { useState, useEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
@@ -33,9 +34,11 @@ const chapters = () => {
   return (
     <SafeAreaView className="flex-1 bg-white">
       <View className="flex-1 px-4">
-        <View className="flex-row items-center mt-6">
+        <View className="flex-row items-center mt-6"
+          style={{ marginTop: Platform.OS === "ios" ? - 3 : - 40 }}
+        >
           <View className="flex-1">
-            <Text className="text-gray-400 text-sm font-aPro">
+            <Text className="text-gray-400 text-xs font-aPro">
               Hi 👋, this is your guide for →
             </Text>
             <Text className="font-mBold text-xl">Rayman Raving Rabbids</Text>
