@@ -88,10 +88,21 @@ const Chapters = () => {
             )}
             <TouchableOpacity onPress={() => router.push("user.chapters")}>
               <ImageBackground
-                source={require("../../assets/images/ray.jpeg")}
+                source={require("../../assets/images/raymanbody.png")}
                 className="w-full h-40 items-center justify-center rounded-xl overflow-hidden"
               >
-                <Text className="text-white font-mMedium">Chapter 4</Text>
+                <Text className="text-white font-mMedium">Chapter 5</Text>
+                <Text className="text-white font-mBold">
+                  Fancomic Rayman Nightmarish
+                </Text>
+              </ImageBackground>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => router.push("user.chapters")}>
+              <ImageBackground
+                source={require("../../assets/images/secondeimage.png")}
+                className="w-full h-40 items-center justify-center rounded-xl overflow-hidden"
+              >
+                <Text className="text-white font-mMedium">Chapter 6</Text>
                 <Text className="text-white font-mBold">
                   Fancomic Rayman Nightmarish
                 </Text>

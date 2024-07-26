@@ -200,7 +200,7 @@ const home = () => {
                   style={{
                     position: "absolute",
                     bottom: 0,
-                    left: Platform.OS === "ios" ? 120 : 220,
+                    left: Platform.OS === "ios" ? 246 : 345,
                   }}
                 />
               </View>
