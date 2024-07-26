@@ -1,7 +1,14 @@
-import { View, Image, Text, SafeAreaView, ScrollView } from 'react-native'
-import React from 'react'
-import { Card } from 'react-native-elements'
-import { useNavigation } from '@react-navigation/native';
+import {
+  View,
+  Image,
+  Text,
+  SafeAreaView,
+  ScrollView,
+  Platform,
+} from "react-native";
+import React from "react";
+import { Card } from "react-native-elements";
+import { useNavigation } from "@react-navigation/native";
 import Ionicons from "react-native-vector-icons/Ionicons";
 
 const user2ubisoft = () => {
@@ -15,17 +22,22 @@ const user2ubisoft = () => {
 
   return (
     <SafeAreaView className="flex-1 bg-white">
-          <View className="flex-row items-center p-4 bg-white">
-              <Text className="flex-1 font-mRegular text-lg font-bold text-center right-20">Rayman Raving Rabbids</Text>
-              <Ionicons
-                name="close-outline"
-                size={26}
-                color="black"
-                style={{ position: "absolute", top: 18, right: 16,}}
-                onPress={() => navigation.goBack()}
-              />
-              <View className="absolute bottom-0 left-0 right-0 h-px bg-gray-400"/>
-          </View>
+      <View
+        className="flex-row items-center p-4 bg-white"
+        style={{ marginTop: Platform.OS === "android" ? 30 : 0 }}
+      >
+        <Text className="flex-1 font-mRegular text-lg font-bold text-center right-20">
+          Rayman Raving Rabbids
+        </Text>
+        <Ionicons
+          name="close-outline"
+          size={26}
+          color="black"
+          style={{ position: "absolute", top: 18, right: 16 }}
+          onPress={() => navigation.goBack()}
+        />
+        <View className="absolute bottom-0 left-0 right-0 h-px bg-gray-400" />
+      </View>
       <ScrollView className="flex-1 mt-4">
         <View className="p-4">
           <View className="">
@@ -85,7 +97,7 @@ const user2ubisoft = () => {
         </View>
       </ScrollView>
     </SafeAreaView>
-  )
-}
+  );
+};
 
-export default user2ubisoft
+export default user2ubisoft;

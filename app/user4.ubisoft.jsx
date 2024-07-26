@@ -1,11 +1,18 @@
-import { View, Image, Text, SafeAreaView, Platform, TouchableOpacity, ScrollView } from 'react-native'
-import React from 'react'
-import { Card } from 'react-native-elements'
+import {
+  View,
+  Image,
+  Text,
+  SafeAreaView,
+  Platform,
+  TouchableOpacity,
+  ScrollView,
+} from "react-native";
+import React from "react";
+import { Card } from "react-native-elements";
 import Ionicons from "react-native-vector-icons/Ionicons";
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation } from "@react-navigation/native";
 
 const user4ubisoft = () => {
-
   const navigation = useNavigation();
 
   React.useLayoutEffect(() => {
@@ -16,22 +23,26 @@ const user4ubisoft = () => {
 
   return (
     <SafeAreaView className="flex-1 bg-white">
-          <View className="flex-row items-center p-4 bg-white">
-              <Text className="flex-1 font-mRegular text-lg font-bold text-center right-20">Rayman Raving Rabbids</Text>
-              <Ionicons
-                name="close-outline"
-                size={26}
-                color="black"
-                style={{ position: "absolute", top: 18, right: 16,}}
-                onPress={() => navigation.goBack()}
-              />
-              <View className="absolute bottom-0 left-0 right-0 h-px bg-gray-400"/>
-          </View>
+      <View
+        className="flex-row items-center p-4 bg-white"
+        style={{ marginTop: Platform.OS === "android" ? 30 : 0 }}
+      >
+        <Text className="flex-1 font-mRegular text-lg font-bold text-center right-20">
+          Rayman Raving Rabbids
+        </Text>
+        <Ionicons
+          name="close-outline"
+          size={26}
+          color="black"
+          style={{ position: "absolute", top: 18, right: 16 }}
+          onPress={() => navigation.goBack()}
+        />
+        <View className="absolute bottom-0 left-0 right-0 h-px bg-gray-400" />
+      </View>
       <ScrollView className="flex-1 mt-4">
         <View className="p-4">
           <View>
-            <View className="">
-            </View>
+            <View className=""></View>
             <View className="py-4">
               <Image
                 source={require("../assets/images/firstmage.png")}
@@ -88,7 +99,7 @@ const user4ubisoft = () => {
         </View>
       </ScrollView>
     </SafeAreaView>
-  )
-}
+  );
+};
 
-export default user4ubisoft
+export default user4ubisoft;

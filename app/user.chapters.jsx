@@ -44,7 +44,7 @@ const userchapters = () => {
       </View>
 
       <ScrollView className="flex-1 top-3" showsVerticalScrollIndicator={false}>
-        <View className="gap-y-1">
+        <View className="gap-y-1 pb-10">
           {/* Element 1 */}
           <TouchableOpacity
             className="flex-row"
